@@ -4,8 +4,16 @@ Generates class diagrams from doxygen XML with callgraphs generated.
 Currently work in progress
 
 ## Usage
-To use this code, use the supplied Doxyfile on source code and point the program.cs Main method to the generated xml folder
+To use this code, use the supplied Doxyfile on source code with doxygen and point the program.cs Main method to the generated xml folder
 Doxygen and Graphviz (the latter must be manually added to Path variable) are required.
+
+Steps:
+
+1. Install doxygen
+2. Install graphviz
+3. Add Graphviz to Path variable in windows (so that opening a cmd.exe window and typing dot launches that program)
+4. Run doxygen on the folder containing the DoxyFile (for example in this repository itself)
+5. Modify the program.cs to point to the folder with the xml output generated (relative to doxyfile this is ./doxygen/xml)
 
 ## Example result.
 
