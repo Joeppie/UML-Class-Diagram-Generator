@@ -7,6 +7,12 @@ Currently work in progress
 To use this code, use the supplied Doxyfile on source code and point the program.cs Main method to the generated xml folder
 Doxygen and Graphviz (the latter must be manually added to Path variable) are required.
 
+## Example result.
+
+This code is still a work in progress..
+
+![Example class diagram generated from this repository](https://raw.githubusercontent.com/Joeppie/UML-Class-Diagram-Generator/master/TestImage.svg)
+
 ## License
 
 GNU Affero for now.
