@@ -28,6 +28,10 @@ This code is still a work in progress..
 
 ![Example class diagram generated from this repository](https://raw.githubusercontent.com/Joeppie/UML-Class-Diagram-Generator/master/TestImage.svg?sanitize=true)
 
+Yes, this diagram is the source code of this repository itself, represented as a class diagram. I should add interfaces, to demonstrate how these are correctly displayed *(Doxygen currently incorrectly displays implementations of interfaces as inheritance from the interface.)
+
+Sadly, not all uses of classes/interfaces (dependency and uses) are correctly recognized; this seems to be a bug in Doxygen's C# support, as they are missing from the XML this tool bases on, but has not yet been reported.
+
 ## License
 
 GNU Affero for now.
