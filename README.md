@@ -11,7 +11,7 @@ Doxygen and Graphviz (the latter must be manually added to Path variable) are re
 
 This code is still a work in progress..
 
-![Example class diagram generated from this repository](https://raw.githubusercontent.com/Joeppie/UML-Class-Diagram-Generator/master/TestImage.svg)
+![Example class diagram generated from this repository](https://raw.githubusercontent.com/Joeppie/UML-Class-Diagram-Generator/master/TestImage.png)
 
 ## License
 
