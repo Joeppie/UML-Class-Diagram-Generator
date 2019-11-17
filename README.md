@@ -1,7 +1,14 @@
 # UML-Class-Diagram-Generator
 Generates class diagrams from doxygen XML with callgraphs generated.
+Currently work in progress.
 
-Currently work in progress
+## Purpose
+Doxygen is a great tool, but it is lackluster in terms of class diagrams.
+
+Adding these can be done by some tools, for example using [doxygraph](https://github.com/jitsuCM/doxygraph) (non-cannonical link).
+However, Doxygraph is written in Perl and tricky to use properly.
+
+This UML-Class-Diagram-Generator should be able to output a class diagram without much hassle, provided you can run .NET on your platform
 
 ## Usage
 To use this code, use the supplied Doxyfile on source code with doxygen and point the program.cs Main method to the generated xml folder
