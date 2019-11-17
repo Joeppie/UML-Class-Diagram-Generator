@@ -129,7 +129,7 @@ namespace UML_Diagram_Generator
 
             string diagramName = "ClassDiagram";
             
-             var parsed = ParseDoxygenStructure(@"..\..\UML Diagram Generator\doxygen\xml");
+             var parsed = ParseDoxygenStructure(@"..\..\doxygen\xml");
              //var parsed = ParseDoxygenStructure(@"C:\Users\Joep\source\repos\DatabasesTentamenCheckerConsoleApp\doxygen\xml");
              StringBuilder result = new StringBuilder();
 
@@ -341,14 +341,6 @@ namespace UML_Diagram_Generator
 
 
 
-        class DotUML
-        {
-            public List<Package> Packages { get; set; }
-            public List<Package> Node { get; set; }
-
-        }
-
-
         /// <summary>
         /// Represents a UML entity that can be represented.
         /// </summary>
@@ -489,7 +481,7 @@ namespace UML_Diagram_Generator
                     string arrowhead;
                     if (use.Compound)
                     {
-                        arrowhead = "arrowhead=diamond";
+                        arrowhead = "arrowhead=odiamond";
                         builder.AppendLine($@"""{ use.TypeName.NoNameSpaces()}""->""{Name.NoNameSpaces()}"" [{arrowhead}  {(use.node is InterfaceNode ? "style =dashed" : "")}  label=""{use.DeclaredName.NoNameSpaces()}"" ]");
 
                     }
