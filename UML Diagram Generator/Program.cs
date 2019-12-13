@@ -29,6 +29,16 @@ namespace UML_Diagram_Generator
             return (s ?? "").Escape().Split(new string[] { "::" }, StringSplitOptions.None).Last();
         }
 
+        /// <summary>Keep just the name.</summary>
+        public static List<string> GetNameSpaceHierarchy(this string s)
+        {
+            if(string.IsNullOrEmpty(s))
+            {
+                return new string[0].ToList();
+            }
+            return s.Escape().Split(new string[] { "::" }, StringSplitOptions.None).Reverse().Skip(1).Reverse().ToList();
+        }
+
         public static string WithoutGuid(this string s)
         {
             return s.Substring(0, s.Length - 35); //Remove the trailing 35 characters containing respectively a _ anda  34 character GUID.
@@ -44,102 +54,26 @@ namespace UML_Diagram_Generator
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            //debug code
-
-            /*  ClassNode test = new ClassNode {
-                  Attributes = new List<Attribute> { new Attribute { Name = "Size", Type = "int", Public = true } },
-                  Methods = new List<Method> { new Method { Name = "GetSize", Type = "int", Public = true } },
-                  Name = "Maat"
-              };
-
-              String template = $@"  digraph G {{
-              fontname = ""Bitstream Vera Sans""
-              fontsize = 8
-
-              node [
-                      fontname = ""Bitstream Vera Sans""
-                      fontsize = 8
-                      shape = ""record""
-              ]
-
-              edge [
-                      fontname = ""Bitstream Vera Sans""
-                      fontsize = 8
-              ]
-              {test.ToString()}
-  }}
-  ";
-
-              FileDotEngine.Run(template, "joeptest.svg");
-
-              FileDotEngine.Run(@"
-
-  digraph G {
-          fontname = ""Bitstream Vera Sans""
-          fontsize = 8
-
-          node [
-                  fontname = ""Bitstream Vera Sans""
-                  fontsize = 8
-                  shape = ""record""
-          ]
-
-          edge [
-                  fontname = ""Bitstream Vera Sans""
-                  fontsize = 8
-          ]
-
-          Animal [
-                  label = ""{Animal|+ name : string\l+ age : int\l|+ die() : void\l}""
-          ]
-
-          subgraph clusterAnimalImpl {
-                  label = ""Package animal.impl""
-
-                  Dog [
-                          label = ""{Dog||+ bark() : void\l}""
-                  ]
-
-                  Cat [
-                          label = ""{Cat||+ meow() : void\l}""
-                  ]
-          }
-
-          edge [
-                  arrowhead = ""empty""
-          ]
-
-          Dog -> Animal
-          Cat -> Animal
-
-          edge [
-                  arrowhead = ""none""
-
-                  headlabel = ""0..*""
-                  taillabel = ""0..*""
-          ]
-
-          Dog -> Cat
-  }
-
-
-  ", "test.svg");*/
-
-
+            
 
             string diagramName = "ClassDiagram";
-            
-             var parsed = ParseDoxygenStructure(@"..\..\doxygen\xml");
-             //var parsed = ParseDoxygenStructure(@"C:\Users\Joep\source\repos\DatabasesTentamenCheckerConsoleApp\doxygen\xml");
-             StringBuilder result = new StringBuilder();
+
+            Package root;
+            List < UMLEntity> parsed;
+            (root,parsed) = ParseDoxygenStructure(@"C:\Users\J\Source\Repos\Robowars\doxygen\xml");
+            //var parsed = ParseDoxygenStructure(@"C:\Users\Joep\source\repos\DatabasesTentamenCheckerConsoleApp\doxygen\xml");
+            StringBuilder result = new StringBuilder();
+
+
+            root.OutputSelf(result);
 
             foreach (var item in parsed)
             {
-                item.OutputSelf(result);
-                result.AppendLine();
+               // item.OutputSelf(result);
+            //    result.AppendLine();
             }
 
-            foreach (var item in parsed.Where(p=>p is Node))
+            foreach (var item in parsed.Where(p => p is Node))
             {
                 (item as Node).OutputRelations(result);
                 result.AppendLine();
@@ -162,7 +96,7 @@ namespace UML_Diagram_Generator
               {result.ToString()}
   }}
   ";
-            FileDotEngine.Run(template ,"joeptest.svg");
+            FileDotEngine.Run(template, "joeptest.svg");
 
 
 
@@ -180,13 +114,13 @@ namespace UML_Diagram_Generator
 
 
 
-        static List<UMLEntity> ParseDoxygenStructure(string folder)
+        static (Package,List<UMLEntity>) ParseDoxygenStructure(string folder)
         {
-            XDocument doc = XDocument.Load(Path.Combine(folder,"index.xml"));
+            XDocument doc = XDocument.Load(Path.Combine(folder, "index.xml"));
 
-            var relevant = new HashSet<string>  { "class", "interface" };
+            var relevant = new HashSet<string> { "class", "interface" };
 
-            var namespaces = doc.Descendants("compound").Where(c => c.Attribute("kind").Value.ToLower() == "namespace" );
+            var namespaces = doc.Descendants("compound").Where(c => c.Attribute("kind").Value.ToLower() == "namespace");
 
             //Redelijk veel werk; todo voor later.
             /*          Dictionary<string,Package> packages = new Dictionary<string,Package>();
@@ -215,6 +149,8 @@ namespace UML_Diagram_Generator
             */
 
             List<UMLEntity> umlEntities = new List<UMLEntity>();
+
+
 
             var elementsToMap = doc.Descendants("compound").Where(c => relevant.Contains(c.Attribute("kind").Value.ToLowerInvariant()));
 
@@ -246,18 +182,14 @@ namespace UML_Diagram_Generator
 
                 var inheritance = nodeDoc.Descendants("inheritancegraph").FirstOrDefault();
 
-                if(inheritance != null)
-                { 
-                    foreach (var inheritee in inheritance.Descendants("node").First(n => n.Attribute("id").Value == "1").Elements("childnode").Select(c=>c.Attribute("refid").Value))
+                if (inheritance != null)
+                {
+                    foreach (var inheritee in inheritance.Descendants("node").First(n => n.Attribute("id").Value == "1").Elements("childnode").Select(c => c.Attribute("refid").Value))
                     {
                         string name = inheritance.Descendants("node").First(n => n.Attribute("id").Value == inheritee).Element("label").Value;
                         node.Inherits.Add(new Usage { TypeName = name });
                     }
                 }
-
-
-
-
 
                 //Populate attributes and methods.
                 foreach (var member in nodeDoc.Descendants("memberdef"))
@@ -287,14 +219,14 @@ namespace UML_Diagram_Generator
 
                                 //Avoid duplication, and don't self-reference for 'dependency' or 'association'; that is superfluous.
                                 if (!node.Uses.Any(u => u.TypeName == usage.TypeName && u.Public == usage.Public) && usage.TypeName != node.Name.NoNameSpaces())
-                                { 
+                                {
                                     node.Uses.Add(usage);
                                 }
 
                                 ;
                                 ///   if(item.)
                             }
-                            
+
 
                             break;
                         case "property":
@@ -315,7 +247,7 @@ namespace UML_Diagram_Generator
                             var use = new Usage { TypeName = typeName, Compound = compound, DeclaredName = member.Element("name").Value };
 
                             node.Uses.Add(use);
-                                  
+
                             break;
                         default: throw new NotImplementedException($"No implementation exists for a member of type {memberType}, encountered in {nodeDocUrl}");
                     }
@@ -334,9 +266,56 @@ namespace UML_Diagram_Generator
                 node.ResolveUses(lookup);
             }
 
-            
+            //Determine package structure
 
-            return umlEntities;
+            List<List<string>> hierarchies = umlEntities.Select(n => n.Name.GetNameSpaceHierarchy()).Distinct().ToList();
+
+            bool singleRoot = hierarchies.Select(h => h.First()).Distinct().Count() == 1;
+
+            Package root;
+
+            if(singleRoot)
+            {
+                root = new Package() { Name = hierarchies.First().First() };
+            }
+            else //Create a virtual root.
+            {
+                root = new Package(true);
+            }
+
+            foreach (var hierarchy in hierarchies)
+            {
+                Package previous = root;
+                int start = root.IsVirtual ? 0 : 1;  //handle root properly, first element is skipped if it always contains a 'real' root.
+                foreach (string name in hierarchy)
+                {
+                    //Either navigate into the underlying package of the package above, or create it as required.
+                    Package package = previous.Get(name);
+                    
+                    if(package == null)
+                    {
+                        package  = new Package() { Name = name };
+                        previous.Packages.Add(package);
+                    }
+                    previous = package;
+                }
+            }
+
+            foreach (Node node in umlEntities)
+            {
+                List<string> packages = node.Name.GetNameSpaceHierarchy().TakeWhile(n => n.NoNameSpaces() != node.Name.NoNameSpaces()).ToList();
+                packages = (!root.IsVirtual) ? packages : packages.Skip(1).ToList(); //Dont try to add root to root.
+
+                Package targetPackage = root;
+                foreach (var p in packages)
+                {
+                    targetPackage = targetPackage.Get(p);
+                }
+
+                targetPackage.Nodes.Add(node);
+            }
+
+            return (root,umlEntities);
         }
 
 
@@ -347,7 +326,6 @@ namespace UML_Diagram_Generator
         abstract class UMLEntity
         {
             public string Name { get; set; }
-
 
             public override string ToString()
             {
@@ -361,30 +339,51 @@ namespace UML_Diagram_Generator
             /// </summary>
             /// <param name="builder">The stringbuilder to render to</param>
             /// <returns></returns>
-            public abstract StringBuilder OutputSelf(StringBuilder builder);
+            public abstract void OutputSelf(StringBuilder builder);
 
         }
 
 
         class Package : UMLEntity
         {
-            public string Name { get; private set; }
             public List<Node> Nodes { get; private set; }
             public List<Package> Packages { get; private set; }
+            /// <summary>Indicates whether the package is real, or just a fictitious root (to be ignored!)</summary>
+            public bool IsVirtual { get; private set; }
 
-
-
-            public Package()
+            public Package(bool isVirtual = false)
             {
                 Nodes = new List<Node>();
                 Packages = new List<Package>();
+                IsVirtual = isVirtual;
             }
 
-            public override StringBuilder OutputSelf(StringBuilder builder)
+            public bool Contains(string name)
             {
-                throw new NotImplementedException();
+                return Packages.Any(p => p.Name == name);
             }
 
+            public Package Get(string name)
+            {
+                return Packages.FirstOrDefault(p => p.Name == name);
+            }
+
+            public override void OutputSelf(StringBuilder builder)
+            {
+
+                builder.Append($"subgraph {Name} {{\n" +
+                    $"label = \"{Name}\"");
+                foreach (var package in Packages)
+                {
+                    package.OutputSelf(builder);
+                }
+                foreach (var node in Nodes)
+                {
+                    node.OutputSelf(builder);
+                }
+
+                builder.Append("\n}\n");
+            }
         }
 
         class Attribute : UMLEntity
@@ -392,7 +391,7 @@ namespace UML_Diagram_Generator
             public string Type { get; set; }
             public bool Public { get; set; }
 
-            public override StringBuilder OutputSelf(StringBuilder builder)
+            public override void OutputSelf(StringBuilder builder)
             {
                 builder.Append(Public ? "+" : "-");
                 builder.Append(" ");
@@ -400,7 +399,6 @@ namespace UML_Diagram_Generator
                 builder.Append(" : ");
                 builder.Append(Type.Escape());
                 builder.Append(@"\l");
-                return builder;
             }
         }
 
@@ -409,7 +407,7 @@ namespace UML_Diagram_Generator
             public bool Public { get; set; }
             public string Type { get; set; }
 
-            public override StringBuilder OutputSelf(StringBuilder builder)
+            public override void OutputSelf(StringBuilder builder)
             {
                 builder.Append(Public ? "+" : "-");
                 builder.Append(" ");
@@ -417,7 +415,6 @@ namespace UML_Diagram_Generator
                 builder.Append("() : ");
                 builder.Append(Type.Escape());
                 builder.Append(@"\l");
-                return builder;
             }
         }
 
@@ -439,13 +436,13 @@ namespace UML_Diagram_Generator
 
             /// <summary>The name the attribute/property has in code.</summary>
             public string DeclaredName { get; set; }
-            
+
             private string _typeName;
             /// <summary>The name of the type of the attribute/property.</summary>
             public string TypeName
             {
                 get { return node != null ? node.Name : _typeName; }
-                set 
+                set
                 {
                     if (node != null) throw new InvalidOperationException("Cant set name of resolved Usage.");
                     _typeName = value;
@@ -476,8 +473,21 @@ namespace UML_Diagram_Generator
             public StringBuilder OutputRelations(StringBuilder builder)
             {
 
-                foreach (var use in Uses.Where(u=>u.Relevant))
+                foreach (var use in Uses.Where(u => u.Relevant))
                 {
+
+                    //Do not pretend to be 'using' a type that is equal to the inheriting types.
+                    if (Inherits.Any(i => i.TypeName == use.TypeName))
+                    {
+                        continue; //don't output if using superclass, this is not a useful notation.
+                    }
+
+
+                    //Todo: any reference to a complex type (i.e. class) tends to get displayed as a compound reference when it is a member in\
+                    //the class; this is not a correct logic; needs to be expanded for example by checking the contents of the 'refid' in question (if it is nested, it
+                    //could probably be assumed to be a more than one relationship; i.e. composition)
+                    use.Compound = false;
+
                     string arrowhead;
                     if (use.Compound)
                     {
@@ -498,10 +508,10 @@ namespace UML_Diagram_Generator
 
                 foreach (var inheritee in Inherits)
                 {
-                    builder.AppendLine(@" edge [arrowhead = ""empty"" ]"); 
-                    builder.AppendLine($"\"{Name.NoNameSpaces()}\"->\"{inheritee.TypeName.NoNameSpaces()}\" [{ (inheritee.node is InterfaceNode ? "style=dashed" : "style=solid")} { (inheritee==null ? ", label=\"??\"" : " " ) }  ]");
+                    builder.AppendLine(@" edge [arrowtail = ""empty"" ]");
+                    builder.AppendLine($"\"{inheritee.TypeName.NoNameSpaces()}\"->\"{Name.NoNameSpaces()}\" [{ (inheritee.node is InterfaceNode ? "style=dashed" : "style=solid")} { (inheritee == null ? ", label=\"??\"" : " ") } dir=back ]");
                 }
-                
+
                 return builder;
             }
 
@@ -514,7 +524,7 @@ namespace UML_Diagram_Generator
                 Methods = new List<Method>();
             }
 
-            public void ResolveUses(Dictionary<string,Node> lookup)
+            public void ResolveUses(Dictionary<string, Node> lookup)
             {
                 foreach (var use in Uses)
                 {
@@ -549,13 +559,13 @@ namespace UML_Diagram_Generator
                         }
                         else //Not part of UML diagram itself, mark it as an attribute.
                         {
-                           //Not sure what to make of it, it's not in the diagram.
+                            //Not sure what to make of it, it's not in the diagram.
                         }
                     }
                 }
             }
 
-            public override StringBuilder OutputSelf(StringBuilder builder)
+            public override void OutputSelf(StringBuilder builder)
             {
 
                 //Todo: markering toevoegen <<interface>> boven de naam van de klasse zelf.
@@ -563,6 +573,10 @@ namespace UML_Diagram_Generator
                 builder.Append(Name.NoNameSpaces());
                 builder.Append("\"");
                 builder.Append(" [ label=\"{");
+                if (this is InterfaceNode)
+                {
+                    builder.Append("&lt;&lt;interface&gt;&gt;\\n");
+                }
                 builder.Append(Name.NoNameSpaces());
 
                 builder.Append("|");
@@ -578,7 +592,6 @@ namespace UML_Diagram_Generator
                 builder.Append("}\"");
 
                 builder.Append(" ] ");
-                return builder;
             }
         }
 
