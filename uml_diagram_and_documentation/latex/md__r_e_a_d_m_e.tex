@@ -1,0 +1,26 @@
+Generates class diagrams from doxygen X\+ML with callgraphs generated. Currently work in progress.\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{Purpose}\label{md__r_e_a_d_m_e_autotoc_md1}
+Doxygen is a great tool, but it is lackluster in terms of class diagrams.
+
+Adding these can be done by some tools, for example using \href{https://github.com/jitsuCM/doxygraph}{\texttt{ doxygraph}} (non-\/cannonical link). However, Doxygraph is written in Perl and tricky to use properly.
+
+This U\+M\+L-\/\+Class-\/\+Diagram-\/\+Generator should be able to output a class diagram without much hassle, provided you can run .N\+ET on your platform\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysection{Usage}\label{md__r_e_a_d_m_e_autotoc_md2}
+To use this code, use the supplied Doxyfile on source code with doxygen and point the \mbox{\hyperlink{_program_8cs}{program.\+cs}} Main method to the generated xml folder Doxygen and Graphviz (the latter must be manually added to Path variable) are required.
+
+Steps\+:
+
+
+\begin{DoxyEnumerate}
+\item Install doxygen
+\item Install graphviz
+\item Add Graphviz to Path variable in windows (so that opening a cmd.\+exe window and typing dot launches that program)
+\item Run doxygen on the folder containing the Doxy\+File (for example in this repository itself)
+\item Modify the \mbox{\hyperlink{_program_8cs}{program.\+cs}} to point to the folder with the xml output generated (relative to doxyfile this is ./doxygen/xml)
+\end{DoxyEnumerate}\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysection{Example result.}\label{md__r_e_a_d_m_e_autotoc_md3}
+This code is still a work in progress..
+
+
+
+Yes, this diagram is the source code of this repository itself, represented as a class diagram. I should add interfaces, to demonstrate how these are correctly displayed $\ast$(Doxygen currently incorrectly displays implementations of interfaces as inheritance from the interface.)
+
+Sadly, not all uses of classes/interfaces (dependency and uses) are correctly recognized; this seems to be a bug in Doxygen\textquotesingle{}s C\# support, as they are missing from the X\+ML this tool bases on, but has not yet been reported.\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysection{License}\label{md__r_e_a_d_m_e_autotoc_md4}
+G\+NU Affero for now. Use this work for whatever purpose you may want, as long as you redistribute modified or derived sources of the code, as per the G\+NU Affero license. \href{https://en.wikipedia.org/wiki/Affero_General_Public_License}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+Affero\+\_\+\+General\+\_\+\+Public\+\_\+\+License}}. 

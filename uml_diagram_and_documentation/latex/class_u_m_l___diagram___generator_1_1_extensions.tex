@@ -1,0 +1,141 @@
+\hypertarget{class_u_m_l___diagram___generator_1_1_extensions}{}\doxysection{U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Extensions Class Reference}
+\label{class_u_m_l___diagram___generator_1_1_extensions}\index{UML\_Diagram\_Generator.Extensions@{UML\_Diagram\_Generator.Extensions}}
+
+
+Collaboration diagram for U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Extensions\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{class_u_m_l___diagram___generator_1_1_extensions__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_extensions_a451a8c86dcafa5538669ca3e485987e8}{Escape}} (this string s)
+\item 
+static string \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_extensions_ac324bf08fe76ac36cdfbc82e914f8c4c}{Safe}} (this string s)
+\begin{DoxyCompactList}\small\item\em Returns a dot syntax safe version of a name to avoid problems. \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_extensions_aa5b4b7c43e4e28d521d7ea4e9deaf727}{No\+Name\+Spaces}} (this string s)
+\begin{DoxyCompactList}\small\item\em Keep just the name. \end{DoxyCompactList}\item 
+static List$<$ string $>$ \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_extensions_a9fbab46d17e1cf514eaebb5ff87270eb}{Get\+Name\+Space\+Hierarchy}} (this string s)
+\begin{DoxyCompactList}\small\item\em Keep just the name. \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_extensions_a2d01b4a953958ac1b94437fc17fefc6f}{Without\+Guid}} (this string s)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 14 of file Program.\+cs.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_m_l___diagram___generator_1_1_extensions_a451a8c86dcafa5538669ca3e485987e8}\label{class_u_m_l___diagram___generator_1_1_extensions_a451a8c86dcafa5538669ca3e485987e8}} 
+\index{UML\_Diagram\_Generator.Extensions@{UML\_Diagram\_Generator.Extensions}!Escape@{Escape}}
+\index{Escape@{Escape}!UML\_Diagram\_Generator.Extensions@{UML\_Diagram\_Generator.Extensions}}
+\doxysubsubsection{\texorpdfstring{Escape()}{Escape()}}
+{\footnotesize\ttfamily static string U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Extensions.\+Escape (\begin{DoxyParamCaption}\item[{this string}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 17 of file Program.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{18         \{}
+\DoxyCodeLine{19             \textcolor{keywordflow}{return} SecurityElement.Escape(s);}
+\DoxyCodeLine{20         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_u_m_l___diagram___generator_1_1_extensions_a9fbab46d17e1cf514eaebb5ff87270eb}\label{class_u_m_l___diagram___generator_1_1_extensions_a9fbab46d17e1cf514eaebb5ff87270eb}} 
+\index{UML\_Diagram\_Generator.Extensions@{UML\_Diagram\_Generator.Extensions}!GetNameSpaceHierarchy@{GetNameSpaceHierarchy}}
+\index{GetNameSpaceHierarchy@{GetNameSpaceHierarchy}!UML\_Diagram\_Generator.Extensions@{UML\_Diagram\_Generator.Extensions}}
+\doxysubsubsection{\texorpdfstring{GetNameSpaceHierarchy()}{GetNameSpaceHierarchy()}}
+{\footnotesize\ttfamily static List$<$string$>$ U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Extensions.\+Get\+Name\+Space\+Hierarchy (\begin{DoxyParamCaption}\item[{this string}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Keep just the name. 
+
+
+
+Definition at line 34 of file Program.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{35         \{}
+\DoxyCodeLine{36             \textcolor{keywordflow}{if} (\textcolor{keywordtype}{string}.IsNullOrEmpty(s))}
+\DoxyCodeLine{37             \{}
+\DoxyCodeLine{38                 \textcolor{keywordflow}{return} \textcolor{keyword}{new} \textcolor{keywordtype}{string}[0].ToList();}
+\DoxyCodeLine{39             \}}
+\DoxyCodeLine{40             \textcolor{keywordflow}{return} s.Escape().Split(\textcolor{keyword}{new} \textcolor{keywordtype}{string}[] \{ \textcolor{stringliteral}{"::"} \}, StringSplitOptions.None).Reverse().Skip(1).Reverse().ToList();}
+\DoxyCodeLine{41         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_u_m_l___diagram___generator_1_1_extensions_aa5b4b7c43e4e28d521d7ea4e9deaf727}\label{class_u_m_l___diagram___generator_1_1_extensions_aa5b4b7c43e4e28d521d7ea4e9deaf727}} 
+\index{UML\_Diagram\_Generator.Extensions@{UML\_Diagram\_Generator.Extensions}!NoNameSpaces@{NoNameSpaces}}
+\index{NoNameSpaces@{NoNameSpaces}!UML\_Diagram\_Generator.Extensions@{UML\_Diagram\_Generator.Extensions}}
+\doxysubsubsection{\texorpdfstring{NoNameSpaces()}{NoNameSpaces()}}
+{\footnotesize\ttfamily static string U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Extensions.\+No\+Name\+Spaces (\begin{DoxyParamCaption}\item[{this string}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Keep just the name. 
+
+
+
+Definition at line 28 of file Program.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{29         \{}
+\DoxyCodeLine{30             \textcolor{keywordflow}{return} (s ?? \textcolor{stringliteral}{""}).Escape().Split(\textcolor{keyword}{new} \textcolor{keywordtype}{string}[] \{ \textcolor{stringliteral}{"::"} \}, StringSplitOptions.None).Last();}
+\DoxyCodeLine{31         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_u_m_l___diagram___generator_1_1_extensions_ac324bf08fe76ac36cdfbc82e914f8c4c}\label{class_u_m_l___diagram___generator_1_1_extensions_ac324bf08fe76ac36cdfbc82e914f8c4c}} 
+\index{UML\_Diagram\_Generator.Extensions@{UML\_Diagram\_Generator.Extensions}!Safe@{Safe}}
+\index{Safe@{Safe}!UML\_Diagram\_Generator.Extensions@{UML\_Diagram\_Generator.Extensions}}
+\doxysubsubsection{\texorpdfstring{Safe()}{Safe()}}
+{\footnotesize\ttfamily static string U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Extensions.\+Safe (\begin{DoxyParamCaption}\item[{this string}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns a dot syntax safe version of a name to avoid problems. 
+
+
+
+Definition at line 22 of file Program.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{23         \{}
+\DoxyCodeLine{24             \textcolor{keywordflow}{return} (s ?? \textcolor{stringliteral}{""}).Escape().Replace(\textcolor{stringliteral}{":"}, \textcolor{stringliteral}{"\_"}).Replace(\textcolor{stringliteral}{"-\/"}, \textcolor{stringliteral}{"\_"}).Replace(\textcolor{stringliteral}{">"}, \textcolor{stringliteral}{"\_"});}
+\DoxyCodeLine{25         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_u_m_l___diagram___generator_1_1_extensions_a2d01b4a953958ac1b94437fc17fefc6f}\label{class_u_m_l___diagram___generator_1_1_extensions_a2d01b4a953958ac1b94437fc17fefc6f}} 
+\index{UML\_Diagram\_Generator.Extensions@{UML\_Diagram\_Generator.Extensions}!WithoutGuid@{WithoutGuid}}
+\index{WithoutGuid@{WithoutGuid}!UML\_Diagram\_Generator.Extensions@{UML\_Diagram\_Generator.Extensions}}
+\doxysubsubsection{\texorpdfstring{WithoutGuid()}{WithoutGuid()}}
+{\footnotesize\ttfamily static string U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Extensions.\+Without\+Guid (\begin{DoxyParamCaption}\item[{this string}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 43 of file Program.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{44         \{}
+\DoxyCodeLine{45             \textcolor{keywordflow}{return} s.Substring(0, s.Length -\/ 35); \textcolor{comment}{//Remove the trailing 35 characters containing respectively a \_ anda  34 character GUID.}}
+\DoxyCodeLine{46         \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+U\+M\+L Diagram Generator/\mbox{\hyperlink{_program_8cs}{Program.\+cs}}\end{DoxyCompactItemize}

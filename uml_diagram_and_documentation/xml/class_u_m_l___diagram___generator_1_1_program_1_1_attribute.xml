@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_u_m_l___diagram___generator_1_1_program_1_1_attribute" kind="class" language="C#" prot="private">
+    <compoundname>UML_Diagram_Generator::Program::Attribute</compoundname>
+    <basecompoundref refid="class_u_m_l___diagram___generator_1_1_program_1_1_u_m_l_entity" prot="public" virt="non-virtual">UML_Diagram_Generator.Program.UMLEntity</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_u_m_l___diagram___generator_1_1_program_1_1_attribute_1ab8e33ede9ed0458df362798806d47277" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string UML_Diagram_Generator.Program.Attribute.Type</definition>
+        <argsstring></argsstring>
+        <name>Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="UML Diagram Generator/Program.cs" line="422" column="27" bodyfile="UML Diagram Generator/Program.cs" bodystart="422" bodyend="422"/>
+        <referencedby refid="class_u_m_l___diagram___generator_1_1_program_1_1_attribute_1a46b54886535b30fe6d37a87885e43ee7" compoundref="_program_8cs" startline="425" endline="433">UML_Diagram_Generator.Program.Attribute.OutputSelf</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_u_m_l___diagram___generator_1_1_program_1_1_attribute_1a6ea1e21a04fde345cd747c32894bc102" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool UML_Diagram_Generator.Program.Attribute.Public</definition>
+        <argsstring></argsstring>
+        <name>Public</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="UML Diagram Generator/Program.cs" line="423" column="25" bodyfile="UML Diagram Generator/Program.cs" bodystart="423" bodyend="423"/>
+        <referencedby refid="class_u_m_l___diagram___generator_1_1_program_1_1_attribute_1a46b54886535b30fe6d37a87885e43ee7" compoundref="_program_8cs" startline="425" endline="433">UML_Diagram_Generator.Program.Attribute.OutputSelf</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_u_m_l___diagram___generator_1_1_program_1_1_attribute_1a46b54886535b30fe6d37a87885e43ee7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void UML_Diagram_Generator.Program.Attribute.OutputSelf</definition>
+        <argsstring>(StringBuilder builder)</argsstring>
+        <name>OutputSelf</name>
+        <reimplements refid="class_u_m_l___diagram___generator_1_1_program_1_1_u_m_l_entity_1a7b2f23d2e85919fe75262c8f1eba0ccc">OutputSelf</reimplements>
+        <param>
+          <type>StringBuilder</type>
+          <declname>builder</declname>
+        </param>
+        <briefdescription>
+<para>Output all that is required to render this UML element within some diagram. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>builder</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The stringbuilder to render to</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="UML Diagram Generator/Program.cs" line="425" column="34" bodyfile="UML Diagram Generator/Program.cs" bodystart="425" bodyend="433"/>
+        <references refid="class_u_m_l___diagram___generator_1_1_program_1_1_u_m_l_entity_1a61b48536fb68af180729e68847b92815" compoundref="_program_8cs" startline="360" endline="360">UML_Diagram_Generator.Program.UMLEntity.Name</references>
+        <references refid="class_u_m_l___diagram___generator_1_1_program_1_1_attribute_1a6ea1e21a04fde345cd747c32894bc102" compoundref="_program_8cs" startline="423" endline="423">UML_Diagram_Generator.Program.Attribute.Public</references>
+        <references refid="class_u_m_l___diagram___generator_1_1_program_1_1_attribute_1ab8e33ede9ed0458df362798806d47277" compoundref="_program_8cs" startline="422" endline="422">UML_Diagram_Generator.Program.Attribute.Type</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>UML_Diagram_Generator.Program.Attribute</label>
+        <link refid="class_u_m_l___diagram___generator_1_1_program_1_1_attribute"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>UMLEntity</label>
+        <link refid="class_u_m_l___diagram___generator_1_1_program_1_1_u_m_l_entity"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>UML_Diagram_Generator.Program.Attribute</label>
+        <link refid="class_u_m_l___diagram___generator_1_1_program_1_1_attribute"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>UMLEntity</label>
+        <link refid="class_u_m_l___diagram___generator_1_1_program_1_1_u_m_l_entity"/>
+      </node>
+    </collaborationgraph>
+    <location file="UML Diagram Generator/Program.cs" line="421" column="1" bodyfile="UML Diagram Generator/Program.cs" bodystart="420" bodyend="434"/>
+    <listofallmembers>
+      <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_u_m_l_entity_1a61b48536fb68af180729e68847b92815" prot="public" virt="non-virtual"><scope>UML_Diagram_Generator::Program::Attribute</scope><name>Name</name></member>
+      <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_attribute_1a46b54886535b30fe6d37a87885e43ee7" prot="public" virt="virtual"><scope>UML_Diagram_Generator::Program::Attribute</scope><name>OutputSelf</name></member>
+      <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_attribute_1a6ea1e21a04fde345cd747c32894bc102" prot="public" virt="non-virtual"><scope>UML_Diagram_Generator::Program::Attribute</scope><name>Public</name></member>
+      <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_u_m_l_entity_1a896991e18b4136d9577445d81f67ef53" prot="public" virt="non-virtual"><scope>UML_Diagram_Generator::Program::Attribute</scope><name>ToString</name></member>
+      <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_attribute_1ab8e33ede9ed0458df362798806d47277" prot="public" virt="non-virtual"><scope>UML_Diagram_Generator::Program::Attribute</scope><name>Type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

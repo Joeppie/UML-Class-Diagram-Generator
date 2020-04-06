@@ -1,0 +1,9 @@
+<map id="UML_Diagram_Generator.Program.UMLEntity" name="UML_Diagram_Generator.Program.UMLEntity">
+<area shape="rect" id="node1" title="Represents a UML entity that can be represented." alt="" coords="387,5,612,112"/>
+<area shape="rect" id="node2" href="$class_u_m_l___diagram___generator_1_1_program_1_1_attribute.html" title=" " alt="" coords="5,189,231,296"/>
+<area shape="rect" id="node3" href="$class_u_m_l___diagram___generator_1_1_program_1_1_method.html" title=" " alt="" coords="255,189,480,296"/>
+<area shape="rect" id="node4" href="$class_u_m_l___diagram___generator_1_1_program_1_1_node.html" title=" " alt="" coords="504,167,759,318"/>
+<area shape="rect" id="node7" href="$class_u_m_l___diagram___generator_1_1_program_1_1_package.html" title=" " alt="" coords="783,160,1008,325"/>
+<area shape="rect" id="node5" href="$class_u_m_l___diagram___generator_1_1_program_1_1_class_node.html" title=" " alt="" coords="393,373,619,465"/>
+<area shape="rect" id="node6" href="$class_u_m_l___diagram___generator_1_1_program_1_1_interface_node.html" title=" " alt="" coords="643,373,868,465"/>
+</map>

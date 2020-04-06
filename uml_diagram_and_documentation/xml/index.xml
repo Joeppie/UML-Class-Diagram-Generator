@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.16">
+  <compound refid="class_u_m_l___diagram___generator_1_1_program_1_1_attribute" kind="class"><name>UML_Diagram_Generator::Program::Attribute</name>
+    <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_attribute_1ab8e33ede9ed0458df362798806d47277" kind="property"><name>Type</name></member>
+    <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_attribute_1a6ea1e21a04fde345cd747c32894bc102" kind="property"><name>Public</name></member>
+    <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_attribute_1a46b54886535b30fe6d37a87885e43ee7" kind="function"><name>OutputSelf</name></member>
+  </compound>
+  <compound refid="class_u_m_l___diagram___generator_1_1_program_1_1_class_node" kind="class"><name>UML_Diagram_Generator::Program::ClassNode</name>
+    <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_class_node_1adabaf4fc50a8e31e8433b2d4a7d713cd" kind="function"><name>ClassNode</name></member>
+  </compound>
+  <compound refid="class_u_m_l___diagram___generator_1_1_program_1_1_class_usage" kind="class"><name>UML_Diagram_Generator::Program::ClassUsage</name>
+  </compound>
+  <compound refid="class_u_m_l___diagram___generator_1_1_program_1_1_doxygen_runner" kind="class"><name>UML_Diagram_Generator::Program::DoxygenRunner</name>
+    <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_doxygen_runner_1ab25111d71a8ee8c800ca245a35484c2f" kind="function"><name>Run</name></member>
+  </compound>
+  <compound refid="class_u_m_l___diagram___generator_1_1_extensions" kind="class"><name>UML_Diagram_Generator::Extensions</name>
+    <member refid="class_u_m_l___diagram___generator_1_1_extensions_1a451a8c86dcafa5538669ca3e485987e8" kind="function"><name>Escape</name></member>
+    <member refid="class_u_m_l___diagram___generator_1_1_extensions_1ac324bf08fe76ac36cdfbc82e914f8c4c" kind="function"><name>Safe</name></member>
+    <member refid="class_u_m_l___diagram___generator_1_1_extensions_1aa5b4b7c43e4e28d521d7ea4e9deaf727" kind="function"><name>NoNameSpaces</name></member>
+    <member refid="class_u_m_l___diagram___generator_1_1_extensions_1a9fbab46d17e1cf514eaebb5ff87270eb" kind="function"><name>GetNameSpaceHierarchy</name></member>
+    <member refid="class_u_m_l___diagram___generator_1_1_extensions_1a2d01b4a953958ac1b94437fc17fefc6f" kind="function"><name>WithoutGuid</name></member>
+  </compound>
+  <compound refid="class_u_m_l___diagram___generator_1_1_program_1_1_file_dot_engine" kind="class"><name>UML_Diagram_Generator::Program::FileDotEngine</name>
+    <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_file_dot_engine_1a1e902957cfab73bb1a89f6c5262d7e3f" kind="function"><name>Run</name></member>
+  </compound>
+  <compound refid="class_u_m_l___diagram___generator_1_1_program_1_1_interface_node" kind="class"><name>UML_Diagram_Generator::Program::InterfaceNode</name>
+    <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_interface_node_1a305625efb854357dbcaf4f21d17bb0b1" kind="function"><name>InterfaceNode</name></member>
+  </compound>
+  <compound refid="class_u_m_l___diagram___generator_1_1_program_1_1_interface_usage" kind="class"><name>UML_Diagram_Generator::Program::InterfaceUsage</name>
+  </compound>
+  <compound refid="class_u_m_l___diagram___generator_1_1_program_1_1_method" kind="class"><name>UML_Diagram_Generator::Program::Method</name>
+    <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_method_1a1ddd663cf7c83a2ba3d46d0395208f0b" kind="property"><name>Public</name></member>
+    <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_method_1ac38242210efc3ec17f73e82016452f67" kind="property"><name>Type</name></member>
+    <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_method_1af86a001fb0b9617a2f324bc889f6ca54" kind="function"><name>OutputSelf</name></member>
+  </compound>
+  <compound refid="class_u_m_l___diagram___generator_1_1_program_1_1_node" kind="class"><name>UML_Diagram_Generator::Program::Node</name>
+    <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_node_1ab6dabecb273a46b0053c340d869ce90d" kind="property"><name>Package</name></member>
+    <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_node_1a84fd7a0e378b4d064912a3eed436f75d" kind="property"><name>Inherits</name></member>
+    <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_node_1a6c7ef182803418b5811777d2529ecdc6" kind="property"><name>Uses</name></member>
+    <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_node_1a3412a834c2aeddc65ffc70b3b96ae512" kind="property"><name>Attributes</name></member>
+    <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_node_1a3e35ff221c546ba390dd98a17fd32847" kind="property"><name>Methods</name></member>
+    <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_node_1ac87f5448c01d188c36dbb9e9ab88b848" kind="property"><name>IsInterface</name></member>
+    <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_node_1a3a71862efec6c130d9c11dd3a34225cc" kind="function"><name>OutputRelations</name></member>
+  </compound>
+  <compound refid="class_u_m_l___diagram___generator_1_1_program_1_1_package" kind="class"><name>UML_Diagram_Generator::Program::Package</name>
+    <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_package_1a673670373f9bcba746ea92bb7c4f4106" kind="property"><name>Nodes</name></member>
+    <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_package_1a14dd9d557894a100986af72f24b4e8c7" kind="property"><name>Packages</name></member>
+    <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_package_1a6d8a7f5e45bf5259e8ff978ce6d4a0f8" kind="property"><name>IsVirtual</name></member>
+    <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_package_1a337b30e61409ed3c78dbe9ba7609d1b0" kind="function"><name>Package</name></member>
+    <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_package_1ac7396a38e214509cedaefbbc3a66e765" kind="function"><name>Contains</name></member>
+    <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_package_1ae189a345ec6929c90cb3431b25c880f5" kind="function"><name>Get</name></member>
+    <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_package_1a2046684a5b0c09a58e88d4322df815b1" kind="function"><name>OutputSelf</name></member>
+  </compound>
+  <compound refid="class_u_m_l___diagram___generator_1_1_program" kind="class"><name>UML_Diagram_Generator::Program</name>
+    <member refid="class_u_m_l___diagram___generator_1_1_program_1ad3cd0807ed7edb9fdd382aa7978be178" kind="variable"><name>Package</name></member>
+    <member refid="class_u_m_l___diagram___generator_1_1_program_1a5f2dfed1b8b900b321af1eaca03af23f" kind="function"><name>Main</name></member>
+    <member refid="class_u_m_l___diagram___generator_1_1_program_1a0fa6d432a7ad24491e78fcf92cbc2617" kind="function"><name>ParseDoxygenStructure</name></member>
+  </compound>
+  <compound refid="class_u_m_l___diagram___generator_1_1_program_1_1_u_m_l_entity" kind="class"><name>UML_Diagram_Generator::Program::UMLEntity</name>
+    <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_u_m_l_entity_1a61b48536fb68af180729e68847b92815" kind="property"><name>Name</name></member>
+    <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_u_m_l_entity_1a896991e18b4136d9577445d81f67ef53" kind="function"><name>ToString</name></member>
+    <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_u_m_l_entity_1a7b2f23d2e85919fe75262c8f1eba0ccc" kind="function"><name>OutputSelf</name></member>
+  </compound>
+  <compound refid="class_u_m_l___diagram___generator_1_1_program_1_1_usage" kind="class"><name>UML_Diagram_Generator::Program::Usage</name>
+    <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_usage_1af4dc16f9002743ec2c42e2eee4f5f19a" kind="property"><name>Compound</name></member>
+    <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_usage_1a35ae362b8238bfb6859cddf45a8200f0" kind="property"><name>node</name></member>
+    <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_usage_1ac78143873ebe8fb5a278a22f1936e4b2" kind="property"><name>Relevant</name></member>
+    <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_usage_1a1b72875347be3ee344ff580aa522e67f" kind="property"><name>Public</name></member>
+    <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_usage_1a0dee3a1d0280fab3fa43dd5a14f13b4d" kind="property"><name>DeclaredName</name></member>
+    <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_usage_1aec53b8dbcebd7b9ba7a0d2d3f9a682e8" kind="property"><name>TypeName</name></member>
+    <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_usage_1ab943cdc9e7f7ee2db0f9b3afabb4a6d1" kind="variable"><name>Resolved</name></member>
+    <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_usage_1af4eb913ef00dd1aedfffe29548bc8d4e" kind="variable"><name>_typeName</name></member>
+  </compound>
+  <compound refid="namespace_system" kind="namespace"><name>System</name>
+  </compound>
+  <compound refid="namespace_system_1_1_collections_1_1_generic" kind="namespace"><name>System::Collections::Generic</name>
+  </compound>
+  <compound refid="namespace_system_1_1_i_o" kind="namespace"><name>System::IO</name>
+  </compound>
+  <compound refid="namespace_system_1_1_linq" kind="namespace"><name>System::Linq</name>
+  </compound>
+  <compound refid="namespace_system_1_1_reflection" kind="namespace"><name>System::Reflection</name>
+  </compound>
+  <compound refid="namespace_system_1_1_runtime_1_1_compiler_services" kind="namespace"><name>System::Runtime::CompilerServices</name>
+  </compound>
+  <compound refid="namespace_system_1_1_runtime_1_1_interop_services" kind="namespace"><name>System::Runtime::InteropServices</name>
+  </compound>
+  <compound refid="namespace_system_1_1_security" kind="namespace"><name>System::Security</name>
+  </compound>
+  <compound refid="namespace_system_1_1_text" kind="namespace"><name>System::Text</name>
+  </compound>
+  <compound refid="namespace_system_1_1_threading_1_1_tasks" kind="namespace"><name>System::Threading::Tasks</name>
+  </compound>
+  <compound refid="namespace_system_1_1_xml_1_1_linq" kind="namespace"><name>System::Xml::Linq</name>
+  </compound>
+  <compound refid="namespace_system_1_1_xml_1_1_x_path" kind="namespace"><name>System::Xml::XPath</name>
+  </compound>
+  <compound refid="namespace_u_m_l___diagram___generator" kind="namespace"><name>UML_Diagram_Generator</name>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="_program_8cs" kind="file"><name>Program.cs</name>
+  </compound>
+  <compound refid="_assembly_info_8cs" kind="file"><name>AssemblyInfo.cs</name>
+  </compound>
+  <compound refid="md__r_e_a_d_m_e" kind="page"><name>md_README</name>
+  </compound>
+  <compound refid="dir_7997e9e98bd2c62ddd160302bfe30d1e" kind="dir"><name>UML Diagram Generator/Properties</name>
+  </compound>
+  <compound refid="dir_fb81a37468528a670fdec90d35b8948d" kind="dir"><name>UML Diagram Generator</name>
+  </compound>
+</doxygenindex>

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="md__r_e_a_d_m_e" kind="page">
+    <compoundname>md_README</compoundname>
+    <title>UML-Class-Diagram-Generator</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Generates class diagrams from doxygen XML with callgraphs generated. Currently work in progress.</para>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md1">
+<title>Purpose</title>
+<para>Doxygen is a great tool, but it is lackluster in terms of class diagrams.</para>
+<para>Adding these can be done by some tools, for example using <ulink url="https://github.com/jitsuCM/doxygraph">doxygraph</ulink> (non-cannonical link). However, Doxygraph is written in Perl and tricky to use properly.</para>
+<para>This UML-Class-Diagram-Generator should be able to output a class diagram without much hassle, provided you can run .NET on your platform</para>
+</sect1>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md2">
+<title>Usage</title>
+<para>To use this code, use the supplied Doxyfile on source code with doxygen and point the <ref refid="_program_8cs" kindref="compound">program.cs</ref> Main method to the generated xml folder Doxygen and Graphviz (the latter must be manually added to Path variable) are required.</para>
+<para>Steps:</para>
+<para><orderedlist>
+<listitem><para>Install doxygen</para>
+</listitem><listitem><para>Install graphviz</para>
+</listitem><listitem><para>Add Graphviz to Path variable in windows (so that opening a cmd.exe window and typing dot launches that program)</para>
+</listitem><listitem><para>Run doxygen on the folder containing the DoxyFile (for example in this repository itself)</para>
+</listitem><listitem><para>Modify the <ref refid="_program_8cs" kindref="compound">program.cs</ref> to point to the folder with the xml output generated (relative to doxyfile this is ./doxygen/xml)</para>
+</listitem></orderedlist>
+</para>
+</sect1>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md3">
+<title>Example result.</title>
+<para>This code is still a work in progress..</para>
+<para><image type="html" name="TestImage.svg?sanitize=true" inline="yes"></image>
+</para>
+<para>Yes, this diagram is the source code of this repository itself, represented as a class diagram. I should add interfaces, to demonstrate how these are correctly displayed *(Doxygen currently incorrectly displays implementations of interfaces as inheritance from the interface.)</para>
+<para>Sadly, not all uses of classes/interfaces (dependency and uses) are correctly recognized; this seems to be a bug in Doxygen&apos;s C# support, as they are missing from the XML this tool bases on, but has not yet been reported.</para>
+</sect1>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md4">
+<title>License</title>
+<para>GNU Affero for now. Use this work for whatever purpose you may want, as long as you redistribute modified or derived sources of the code, as per the GNU Affero license. <ulink url="https://en.wikipedia.org/wiki/Affero_General_Public_License">https://en.wikipedia.org/wiki/Affero_General_Public_License</ulink>. </para>
+</sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

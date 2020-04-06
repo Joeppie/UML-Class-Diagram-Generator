@@ -1,0 +1,226 @@
+\hypertarget{class_u_m_l___diagram___generator_1_1_program_1_1_package}{}\doxysection{U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Program.\+Package Class Reference}
+\label{class_u_m_l___diagram___generator_1_1_program_1_1_package}\index{UML\_Diagram\_Generator.Program.Package@{UML\_Diagram\_Generator.Program.Package}}
+
+
+Inheritance diagram for U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Program.\+Package\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{class_u_m_l___diagram___generator_1_1_program_1_1_package__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Program.\+Package\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{class_u_m_l___diagram___generator_1_1_program_1_1_package__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_package_a337b30e61409ed3c78dbe9ba7609d1b0}{Package}} (bool is\+Virtual=false)
+\item 
+bool \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_package_ac7396a38e214509cedaefbbc3a66e765}{Contains}} (string name)
+\item 
+\mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_package}{Package}} \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_package_ae189a345ec6929c90cb3431b25c880f5}{Get}} (string name)
+\item 
+override void \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_package_a2046684a5b0c09a58e88d4322df815b1}{Output\+Self}} (String\+Builder builder)
+\begin{DoxyCompactList}\small\item\em Output all that is required to render this U\+ML element within some diagram. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_node}{Node}} $>$ \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_package_a673670373f9bcba746ea92bb7c4f4106}{Nodes}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
+\item 
+List$<$ \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_package}{Package}} $>$ \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_package_a14dd9d557894a100986af72f24b4e8c7}{Packages}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_package_a6d8a7f5e45bf5259e8ff978ce6d4a0f8}{Is\+Virtual}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates whether the package is real, or just a fictitious root (to be ignored!) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 378 of file Program.\+cs.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_u_m_l___diagram___generator_1_1_program_1_1_package_a337b30e61409ed3c78dbe9ba7609d1b0}\label{class_u_m_l___diagram___generator_1_1_program_1_1_package_a337b30e61409ed3c78dbe9ba7609d1b0}} 
+\index{UML\_Diagram\_Generator.Program.Package@{UML\_Diagram\_Generator.Program.Package}!Package@{Package}}
+\index{Package@{Package}!UML\_Diagram\_Generator.Program.Package@{UML\_Diagram\_Generator.Program.Package}}
+\doxysubsubsection{\texorpdfstring{Package()}{Package()}}
+{\footnotesize\ttfamily U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Program.\+Package.\+Package (\begin{DoxyParamCaption}\item[{bool}]{is\+Virtual = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 385 of file Program.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{386             \{}
+\DoxyCodeLine{387                 \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_package_a673670373f9bcba746ea92bb7c4f4106}{Nodes}} = \textcolor{keyword}{new} List<Node>();}
+\DoxyCodeLine{388                 \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_package_a14dd9d557894a100986af72f24b4e8c7}{Packages}} = \textcolor{keyword}{new} List<Package>();}
+\DoxyCodeLine{389                 \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_package_a6d8a7f5e45bf5259e8ff978ce6d4a0f8}{IsVirtual}} = isVirtual;}
+\DoxyCodeLine{390             \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_m_l___diagram___generator_1_1_program_1_1_package_ac7396a38e214509cedaefbbc3a66e765}\label{class_u_m_l___diagram___generator_1_1_program_1_1_package_ac7396a38e214509cedaefbbc3a66e765}} 
+\index{UML\_Diagram\_Generator.Program.Package@{UML\_Diagram\_Generator.Program.Package}!Contains@{Contains}}
+\index{Contains@{Contains}!UML\_Diagram\_Generator.Program.Package@{UML\_Diagram\_Generator.Program.Package}}
+\doxysubsubsection{\texorpdfstring{Contains()}{Contains()}}
+{\footnotesize\ttfamily bool U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Program.\+Package.\+Contains (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+
+
+Definition at line 392 of file Program.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{393             \{}
+\DoxyCodeLine{394                 \textcolor{keywordflow}{return} \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_package_a14dd9d557894a100986af72f24b4e8c7}{Packages}}.Any(p => p.Name == name);}
+\DoxyCodeLine{395             \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_u_m_l___diagram___generator_1_1_program_1_1_package_ae189a345ec6929c90cb3431b25c880f5}\label{class_u_m_l___diagram___generator_1_1_program_1_1_package_ae189a345ec6929c90cb3431b25c880f5}} 
+\index{UML\_Diagram\_Generator.Program.Package@{UML\_Diagram\_Generator.Program.Package}!Get@{Get}}
+\index{Get@{Get}!UML\_Diagram\_Generator.Program.Package@{UML\_Diagram\_Generator.Program.Package}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_package}{Package}} U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Program.\+Package.\+Get (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+
+
+Definition at line 397 of file Program.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{398             \{}
+\DoxyCodeLine{399                 \textcolor{keywordflow}{return} \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_package_a14dd9d557894a100986af72f24b4e8c7}{Packages}}.FirstOrDefault(p => p.Name == name);}
+\DoxyCodeLine{400             \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_m_l___diagram___generator_1_1_program_1_1_package_ae189a345ec6929c90cb3431b25c880f5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_m_l___diagram___generator_1_1_program_1_1_package_a2046684a5b0c09a58e88d4322df815b1}\label{class_u_m_l___diagram___generator_1_1_program_1_1_package_a2046684a5b0c09a58e88d4322df815b1}} 
+\index{UML\_Diagram\_Generator.Program.Package@{UML\_Diagram\_Generator.Program.Package}!OutputSelf@{OutputSelf}}
+\index{OutputSelf@{OutputSelf}!UML\_Diagram\_Generator.Program.Package@{UML\_Diagram\_Generator.Program.Package}}
+\doxysubsubsection{\texorpdfstring{OutputSelf()}{OutputSelf()}}
+{\footnotesize\ttfamily override void U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Program.\+Package.\+Output\+Self (\begin{DoxyParamCaption}\item[{String\+Builder}]{builder }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Output all that is required to render this U\+ML element within some diagram. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em builder} & The stringbuilder to render to\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_u_m_l_entity_a7b2f23d2e85919fe75262c8f1eba0ccc}{U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Program.\+U\+M\+L\+Entity}}.
+
+
+
+Definition at line 402 of file Program.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{403             \{}
+\DoxyCodeLine{404 }
+\DoxyCodeLine{405                 builder.Append(\$\textcolor{stringliteral}{"subgraph \{Name\} \{\{\(\backslash\)n"} +}
+\DoxyCodeLine{406                     \$\textcolor{stringliteral}{"label = \(\backslash\)"\{Name\}\(\backslash\)""});}
+\DoxyCodeLine{407                 \textcolor{keywordflow}{foreach} (var package \textcolor{keywordflow}{in} \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_package_a14dd9d557894a100986af72f24b4e8c7}{Packages}})}
+\DoxyCodeLine{408                 \{}
+\DoxyCodeLine{409                     package.OutputSelf(builder);}
+\DoxyCodeLine{410                 \}}
+\DoxyCodeLine{411                 \textcolor{keywordflow}{foreach} (var node \textcolor{keywordflow}{in} \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_package_a673670373f9bcba746ea92bb7c4f4106}{Nodes}})}
+\DoxyCodeLine{412                 \{}
+\DoxyCodeLine{413                     node.OutputSelf(builder);}
+\DoxyCodeLine{414                 \}}
+\DoxyCodeLine{415 }
+\DoxyCodeLine{416                 builder.Append(\textcolor{stringliteral}{"\(\backslash\)n\}\(\backslash\)n"});}
+\DoxyCodeLine{417             \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_m_l___diagram___generator_1_1_program_1_1_package_a2046684a5b0c09a58e88d4322df815b1_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_u_m_l___diagram___generator_1_1_program_1_1_package_a6d8a7f5e45bf5259e8ff978ce6d4a0f8}\label{class_u_m_l___diagram___generator_1_1_program_1_1_package_a6d8a7f5e45bf5259e8ff978ce6d4a0f8}} 
+\index{UML\_Diagram\_Generator.Program.Package@{UML\_Diagram\_Generator.Program.Package}!IsVirtual@{IsVirtual}}
+\index{IsVirtual@{IsVirtual}!UML\_Diagram\_Generator.Program.Package@{UML\_Diagram\_Generator.Program.Package}}
+\doxysubsubsection{\texorpdfstring{IsVirtual}{IsVirtual}}
+{\footnotesize\ttfamily bool U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Program.\+Package.\+Is\+Virtual\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
+
+
+
+Indicates whether the package is real, or just a fictitious root (to be ignored!) 
+
+
+
+Definition at line 383 of file Program.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{383 \{ \textcolor{keyword}{get}; \textcolor{keyword}{private} \textcolor{keyword}{set}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_u_m_l___diagram___generator_1_1_program_1_1_package_a673670373f9bcba746ea92bb7c4f4106}\label{class_u_m_l___diagram___generator_1_1_program_1_1_package_a673670373f9bcba746ea92bb7c4f4106}} 
+\index{UML\_Diagram\_Generator.Program.Package@{UML\_Diagram\_Generator.Program.Package}!Nodes@{Nodes}}
+\index{Nodes@{Nodes}!UML\_Diagram\_Generator.Program.Package@{UML\_Diagram\_Generator.Program.Package}}
+\doxysubsubsection{\texorpdfstring{Nodes}{Nodes}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_node}{Node}}$>$ U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Program.\+Package.\+Nodes\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
+
+
+
+Definition at line 380 of file Program.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{380 \{ \textcolor{keyword}{get}; \textcolor{keyword}{private} \textcolor{keyword}{set}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_u_m_l___diagram___generator_1_1_program_1_1_package_a14dd9d557894a100986af72f24b4e8c7}\label{class_u_m_l___diagram___generator_1_1_program_1_1_package_a14dd9d557894a100986af72f24b4e8c7}} 
+\index{UML\_Diagram\_Generator.Program.Package@{UML\_Diagram\_Generator.Program.Package}!Packages@{Packages}}
+\index{Packages@{Packages}!UML\_Diagram\_Generator.Program.Package@{UML\_Diagram\_Generator.Program.Package}}
+\doxysubsubsection{\texorpdfstring{Packages}{Packages}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_package}{Package}}$>$ U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Program.\+Package.\+Packages\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
+
+
+
+Definition at line 381 of file Program.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{381 \{ \textcolor{keyword}{get}; \textcolor{keyword}{private} \textcolor{keyword}{set}; \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+U\+M\+L Diagram Generator/\mbox{\hyperlink{_program_8cs}{Program.\+cs}}\end{DoxyCompactItemize}

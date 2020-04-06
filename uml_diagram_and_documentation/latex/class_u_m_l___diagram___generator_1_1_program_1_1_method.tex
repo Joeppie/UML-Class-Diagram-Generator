@@ -1,0 +1,120 @@
+\hypertarget{class_u_m_l___diagram___generator_1_1_program_1_1_method}{}\doxysection{U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Program.\+Method Class Reference}
+\label{class_u_m_l___diagram___generator_1_1_program_1_1_method}\index{UML\_Diagram\_Generator.Program.Method@{UML\_Diagram\_Generator.Program.Method}}
+
+
+Inheritance diagram for U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Program.\+Method\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{class_u_m_l___diagram___generator_1_1_program_1_1_method__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Program.\+Method\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{class_u_m_l___diagram___generator_1_1_program_1_1_method__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_method_af86a001fb0b9617a2f324bc889f6ca54}{Output\+Self}} (String\+Builder builder)
+\begin{DoxyCompactList}\small\item\em Output all that is required to render this U\+ML element within some diagram. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_method_a1ddd663cf7c83a2ba3d46d0395208f0b}{Public}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_method_ac38242210efc3ec17f73e82016452f67}{Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 436 of file Program.\+cs.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_m_l___diagram___generator_1_1_program_1_1_method_af86a001fb0b9617a2f324bc889f6ca54}\label{class_u_m_l___diagram___generator_1_1_program_1_1_method_af86a001fb0b9617a2f324bc889f6ca54}} 
+\index{UML\_Diagram\_Generator.Program.Method@{UML\_Diagram\_Generator.Program.Method}!OutputSelf@{OutputSelf}}
+\index{OutputSelf@{OutputSelf}!UML\_Diagram\_Generator.Program.Method@{UML\_Diagram\_Generator.Program.Method}}
+\doxysubsubsection{\texorpdfstring{OutputSelf()}{OutputSelf()}}
+{\footnotesize\ttfamily override void U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Program.\+Method.\+Output\+Self (\begin{DoxyParamCaption}\item[{String\+Builder}]{builder }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Output all that is required to render this U\+ML element within some diagram. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em builder} & The stringbuilder to render to\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_u_m_l_entity_a7b2f23d2e85919fe75262c8f1eba0ccc}{U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Program.\+U\+M\+L\+Entity}}.
+
+
+
+Definition at line 441 of file Program.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{442             \{}
+\DoxyCodeLine{443                 builder.Append(\mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_method_a1ddd663cf7c83a2ba3d46d0395208f0b}{Public}} ? \textcolor{stringliteral}{"+"} : \textcolor{stringliteral}{"-\/"});}
+\DoxyCodeLine{444                 builder.Append(\textcolor{stringliteral}{" "});}
+\DoxyCodeLine{445                 builder.Append(\mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_u_m_l_entity_a61b48536fb68af180729e68847b92815}{Name}}.NoNameSpaces());}
+\DoxyCodeLine{446                 builder.Append(\textcolor{stringliteral}{"() : "});}
+\DoxyCodeLine{447                 builder.Append(\mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_method_ac38242210efc3ec17f73e82016452f67}{Type}}.Escape());}
+\DoxyCodeLine{448                 builder.Append(\textcolor{stringliteral}{@"\(\backslash\)l"});}
+\DoxyCodeLine{449             \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_u_m_l___diagram___generator_1_1_program_1_1_method_a1ddd663cf7c83a2ba3d46d0395208f0b}\label{class_u_m_l___diagram___generator_1_1_program_1_1_method_a1ddd663cf7c83a2ba3d46d0395208f0b}} 
+\index{UML\_Diagram\_Generator.Program.Method@{UML\_Diagram\_Generator.Program.Method}!Public@{Public}}
+\index{Public@{Public}!UML\_Diagram\_Generator.Program.Method@{UML\_Diagram\_Generator.Program.Method}}
+\doxysubsubsection{\texorpdfstring{Public}{Public}}
+{\footnotesize\ttfamily bool U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Program.\+Method.\+Public\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line 438 of file Program.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{438 \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_u_m_l___diagram___generator_1_1_program_1_1_method_ac38242210efc3ec17f73e82016452f67}\label{class_u_m_l___diagram___generator_1_1_program_1_1_method_ac38242210efc3ec17f73e82016452f67}} 
+\index{UML\_Diagram\_Generator.Program.Method@{UML\_Diagram\_Generator.Program.Method}!Type@{Type}}
+\index{Type@{Type}!UML\_Diagram\_Generator.Program.Method@{UML\_Diagram\_Generator.Program.Method}}
+\doxysubsubsection{\texorpdfstring{Type}{Type}}
+{\footnotesize\ttfamily string U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Program.\+Method.\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line 439 of file Program.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{439 \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+U\+M\+L Diagram Generator/\mbox{\hyperlink{_program_8cs}{Program.\+cs}}\end{DoxyCompactItemize}

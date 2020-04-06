@@ -1,0 +1,74 @@
+\hypertarget{class_u_m_l___diagram___generator_1_1_program_1_1_file_dot_engine}{}\doxysection{U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Program.\+File\+Dot\+Engine Class Reference}
+\label{class_u_m_l___diagram___generator_1_1_program_1_1_file_dot_engine}\index{UML\_Diagram\_Generator.Program.FileDotEngine@{UML\_Diagram\_Generator.Program.FileDotEngine}}
+
+
+Collaboration diagram for U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Program.\+File\+Dot\+Engine\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{class_u_m_l___diagram___generator_1_1_program_1_1_file_dot_engine__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_file_dot_engine_a1e902957cfab73bb1a89f6c5262d7e3f}{Run}} (string dot, string file\+Name)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 647 of file Program.\+cs.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_m_l___diagram___generator_1_1_program_1_1_file_dot_engine_a1e902957cfab73bb1a89f6c5262d7e3f}\label{class_u_m_l___diagram___generator_1_1_program_1_1_file_dot_engine_a1e902957cfab73bb1a89f6c5262d7e3f}} 
+\index{UML\_Diagram\_Generator.Program.FileDotEngine@{UML\_Diagram\_Generator.Program.FileDotEngine}!Run@{Run}}
+\index{Run@{Run}!UML\_Diagram\_Generator.Program.FileDotEngine@{UML\_Diagram\_Generator.Program.FileDotEngine}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily static void U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Program.\+File\+Dot\+Engine.\+Run (\begin{DoxyParamCaption}\item[{string}]{dot,  }\item[{string}]{file\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 649 of file Program.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{650             \{}
+\DoxyCodeLine{651                 \textcolor{keywordtype}{string} executable = \textcolor{stringliteral}{@"dot.exe"};}
+\DoxyCodeLine{652                 File.WriteAllText(fileName, dot);}
+\DoxyCodeLine{653 }
+\DoxyCodeLine{654                 System.Diagnostics.Process process = \textcolor{keyword}{new} System.Diagnostics.Process();}
+\DoxyCodeLine{655 }
+\DoxyCodeLine{656                 \textcolor{comment}{// Stop the process from opening a new window}}
+\DoxyCodeLine{657                 process.StartInfo.RedirectStandardOutput = \textcolor{keyword}{true};}
+\DoxyCodeLine{658                 process.StartInfo.UseShellExecute = \textcolor{keyword}{false};}
+\DoxyCodeLine{659                 process.StartInfo.CreateNoWindow = \textcolor{keyword}{true};}
+\DoxyCodeLine{660 }
+\DoxyCodeLine{661                 \textcolor{comment}{// Setup executable and parameters}}
+\DoxyCodeLine{662                 process.StartInfo.FileName = executable;}
+\DoxyCodeLine{663                 process.StartInfo.Arguments = \textcolor{keywordtype}{string}.Format(\textcolor{stringliteral}{@"\{0\} -\/Tsvg -\/O"}, fileName);}
+\DoxyCodeLine{664 }
+\DoxyCodeLine{665                 \textcolor{comment}{// Go}}
+\DoxyCodeLine{666                 process.Start();}
+\DoxyCodeLine{667                 \textcolor{comment}{// and wait dot.exe to complete and exit}}
+\DoxyCodeLine{668                 process.WaitForExit();}
+\DoxyCodeLine{669             \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_m_l___diagram___generator_1_1_program_1_1_file_dot_engine_a1e902957cfab73bb1a89f6c5262d7e3f_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+U\+M\+L Diagram Generator/\mbox{\hyperlink{_program_8cs}{Program.\+cs}}\end{DoxyCompactItemize}

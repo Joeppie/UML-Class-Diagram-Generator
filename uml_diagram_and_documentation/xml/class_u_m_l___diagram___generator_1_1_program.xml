@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_u_m_l___diagram___generator_1_1_program" kind="class" language="C#" prot="public">
+    <compoundname>UML_Diagram_Generator::Program</compoundname>
+    <innerclass refid="class_u_m_l___diagram___generator_1_1_program_1_1_attribute" prot="private">UML_Diagram_Generator::Program::Attribute</innerclass>
+    <innerclass refid="class_u_m_l___diagram___generator_1_1_program_1_1_class_node" prot="private">UML_Diagram_Generator::Program::ClassNode</innerclass>
+    <innerclass refid="class_u_m_l___diagram___generator_1_1_program_1_1_class_usage" prot="private">UML_Diagram_Generator::Program::ClassUsage</innerclass>
+    <innerclass refid="class_u_m_l___diagram___generator_1_1_program_1_1_doxygen_runner" prot="public">UML_Diagram_Generator::Program::DoxygenRunner</innerclass>
+    <innerclass refid="class_u_m_l___diagram___generator_1_1_program_1_1_file_dot_engine" prot="public">UML_Diagram_Generator::Program::FileDotEngine</innerclass>
+    <innerclass refid="class_u_m_l___diagram___generator_1_1_program_1_1_interface_node" prot="private">UML_Diagram_Generator::Program::InterfaceNode</innerclass>
+    <innerclass refid="class_u_m_l___diagram___generator_1_1_program_1_1_interface_usage" prot="private">UML_Diagram_Generator::Program::InterfaceUsage</innerclass>
+    <innerclass refid="class_u_m_l___diagram___generator_1_1_program_1_1_method" prot="private">UML_Diagram_Generator::Program::Method</innerclass>
+    <innerclass refid="class_u_m_l___diagram___generator_1_1_program_1_1_node" prot="private">UML_Diagram_Generator::Program::Node</innerclass>
+    <innerclass refid="class_u_m_l___diagram___generator_1_1_program_1_1_package" prot="private">UML_Diagram_Generator::Program::Package</innerclass>
+    <innerclass refid="class_u_m_l___diagram___generator_1_1_program_1_1_u_m_l_entity" prot="private">UML_Diagram_Generator::Program::UMLEntity</innerclass>
+    <innerclass refid="class_u_m_l___diagram___generator_1_1_program_1_1_usage" prot="private">UML_Diagram_Generator::Program::Usage</innerclass>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_u_m_l___diagram___generator_1_1_program_1ad3cd0807ed7edb9fdd382aa7978be178" prot="private" static="yes" mutable="no">
+        <type>static</type>
+        <definition>UML_Diagram_Generator.Program.Package</definition>
+        <argsstring></argsstring>
+        <name>Package</name>
+        <initializer>{path}\{outputSubPath}\xml&quot;  digraph {diagramName} {{
+              fontname = &quot;&quot;Consolas&quot;&quot;
+              fontsize = 8
+
+              node [
+                      fontname = &quot;&quot;Consolas&quot;&quot;
+                      fontsize = 8
+                      shape = &quot;&quot;record&quot;&quot;
+              ]
+
+              edge [
+                      fontname = &quot;&quot;Consolas&quot;&quot;
+                      fontsize = 8
+              ]
+              {result.ToString()}
+  }}
+  &quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="UML Diagram Generator/Program.cs" line="151" column="16" bodyfile="UML Diagram Generator/Program.cs" bodystart="151" bodyend="-1"/>
+        <referencedby refid="class_u_m_l___diagram___generator_1_1_program_1a0fa6d432a7ad24491e78fcf92cbc2617" compoundref="_program_8cs" startline="151" endline="353">UML_Diagram_Generator.Program.ParseDoxygenStructure</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_u_m_l___diagram___generator_1_1_program_1a5f2dfed1b8b900b321af1eaca03af23f" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void UML_Diagram_Generator.Program.Main</definition>
+        <argsstring>(string[] args)</argsstring>
+        <name>Main</name>
+        <param>
+          <type>string[]</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+<para>Call the program either with or without arguments specifying in which folder it should run. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="UML Diagram Generator/Program.cs" line="56" column="21" bodyfile="UML Diagram Generator/Program.cs" bodystart="56" bodyend="147"/>
+        <references refid="class_u_m_l___diagram___generator_1_1_program_1_1_package_1a2046684a5b0c09a58e88d4322df815b1" compoundref="_program_8cs" startline="402" endline="417">UML_Diagram_Generator.Program.Package.OutputSelf</references>
+        <references refid="class_u_m_l___diagram___generator_1_1_program_1a0fa6d432a7ad24491e78fcf92cbc2617" compoundref="_program_8cs" startline="151" endline="353">UML_Diagram_Generator.Program.ParseDoxygenStructure</references>
+        <references refid="class_u_m_l___diagram___generator_1_1_program_1_1_file_dot_engine_1a1e902957cfab73bb1a89f6c5262d7e3f" compoundref="_program_8cs" startline="649" endline="669">UML_Diagram_Generator.Program.FileDotEngine.Run</references>
+        <references refid="class_u_m_l___diagram___generator_1_1_program_1_1_doxygen_runner_1ab25111d71a8ee8c800ca245a35484c2f" compoundref="_program_8cs" startline="676" endline="712">UML_Diagram_Generator.Program.DoxygenRunner.Run</references>
+      </memberdef>
+      <memberdef kind="function" id="class_u_m_l___diagram___generator_1_1_program_1a0fa6d432a7ad24491e78fcf92cbc2617" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_u_m_l___diagram___generator_1_1_program_1_1_u_m_l_entity" kindref="compound">UMLEntity</ref> &gt;</type>
+        <definition>static List&lt;UMLEntity&gt; UML_Diagram_Generator.Program.ParseDoxygenStructure</definition>
+        <argsstring>(string folder)</argsstring>
+        <name>ParseDoxygenStructure</name>
+        <param>
+          <type>string</type>
+          <declname>folder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>if(item.)</para>
+        </inbodydescription>
+        <location file="UML Diagram Generator/Program.cs" line="151" column="29" bodyfile="UML Diagram Generator/Program.cs" bodystart="151" bodyend="353"/>
+        <references refid="class_u_m_l___diagram___generator_1_1_program_1_1_package_1ae189a345ec6929c90cb3431b25c880f5" compoundref="_program_8cs" startline="397" endline="400">UML_Diagram_Generator.Program.Package.Get</references>
+        <references refid="class_u_m_l___diagram___generator_1_1_program_1_1_node_1a84fd7a0e378b4d064912a3eed436f75d" compoundref="_program_8cs" startline="491" endline="491">UML_Diagram_Generator.Program.Node.Inherits</references>
+        <references refid="class_u_m_l___diagram___generator_1_1_program_1_1_package_1a6d8a7f5e45bf5259e8ff978ce6d4a0f8" compoundref="_program_8cs" startline="383" endline="383">UML_Diagram_Generator.Program.Package.IsVirtual</references>
+        <references refid="class_u_m_l___diagram___generator_1_1_program_1_1_u_m_l_entity_1a61b48536fb68af180729e68847b92815" compoundref="_program_8cs" startline="360" endline="360">UML_Diagram_Generator.Program.UMLEntity.Name</references>
+        <references refid="class_u_m_l___diagram___generator_1_1_program_1_1_package_1a673670373f9bcba746ea92bb7c4f4106" compoundref="_program_8cs" startline="380" endline="380">UML_Diagram_Generator.Program.Package.Nodes</references>
+        <references refid="class_u_m_l___diagram___generator_1_1_program_1ad3cd0807ed7edb9fdd382aa7978be178" compoundref="_program_8cs" startline="151">UML_Diagram_Generator.Program.Package</references>
+        <references refid="class_u_m_l___diagram___generator_1_1_program_1_1_package_1a14dd9d557894a100986af72f24b4e8c7" compoundref="_program_8cs" startline="381" endline="381">UML_Diagram_Generator.Program.Package.Packages</references>
+        <referencedby refid="class_u_m_l___diagram___generator_1_1_program_1a5f2dfed1b8b900b321af1eaca03af23f" compoundref="_program_8cs" startline="56" endline="147">UML_Diagram_Generator.Program.Main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>UML_Diagram_Generator.Program</label>
+        <link refid="class_u_m_l___diagram___generator_1_1_program"/>
+      </node>
+    </collaborationgraph>
+    <location file="UML Diagram Generator/Program.cs" line="51" column="1" bodyfile="UML Diagram Generator/Program.cs" bodystart="50" bodyend="716"/>
+    <listofallmembers>
+      <member refid="class_u_m_l___diagram___generator_1_1_program_1a5f2dfed1b8b900b321af1eaca03af23f" prot="private" virt="non-virtual"><scope>UML_Diagram_Generator::Program</scope><name>Main</name></member>
+      <member refid="class_u_m_l___diagram___generator_1_1_program_1ad3cd0807ed7edb9fdd382aa7978be178" prot="private" virt="non-virtual"><scope>UML_Diagram_Generator::Program</scope><name>Package</name></member>
+      <member refid="class_u_m_l___diagram___generator_1_1_program_1a0fa6d432a7ad24491e78fcf92cbc2617" prot="private" virt="non-virtual"><scope>UML_Diagram_Generator::Program</scope><name>ParseDoxygenStructure</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

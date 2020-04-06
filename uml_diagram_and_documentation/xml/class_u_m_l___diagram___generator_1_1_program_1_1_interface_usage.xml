@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_u_m_l___diagram___generator_1_1_program_1_1_interface_usage" kind="class" language="C#" prot="private">
+    <compoundname>UML_Diagram_Generator::Program::InterfaceUsage</compoundname>
+    <basecompoundref refid="class_u_m_l___diagram___generator_1_1_program_1_1_usage" prot="public" virt="non-virtual">UML_Diagram_Generator.Program.Usage&lt; InterfaceNode &gt;</basecompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Usage&lt; InterfaceNode &gt;</label>
+        <link refid="class_u_m_l___diagram___generator_1_1_program_1_1_usage"/>
+        <childnode refid="3" relation="template-instance">
+          <edgelabel>&lt; InterfaceNode &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>UML_Diagram_Generator.Program.InterfaceUsage</label>
+        <link refid="class_u_m_l___diagram___generator_1_1_program_1_1_interface_usage"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>UML_Diagram_Generator.Program.Usage&lt; T &gt;</label>
+        <link refid="class_u_m_l___diagram___generator_1_1_program_1_1_usage"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Usage&lt; InterfaceNode &gt;</label>
+        <link refid="class_u_m_l___diagram___generator_1_1_program_1_1_usage"/>
+        <childnode refid="3" relation="template-instance">
+          <edgelabel>&lt; InterfaceNode &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>UML_Diagram_Generator.Program.InterfaceUsage</label>
+        <link refid="class_u_m_l___diagram___generator_1_1_program_1_1_interface_usage"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>UML_Diagram_Generator.Program.Usage&lt; T &gt;</label>
+        <link refid="class_u_m_l___diagram___generator_1_1_program_1_1_usage"/>
+      </node>
+    </collaborationgraph>
+    <location file="UML Diagram Generator/Program.cs" line="485" column="36" bodyfile="UML Diagram Generator/Program.cs" bodystart="485" bodyend="485"/>
+    <listofallmembers>
+      <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_usage_1af4eb913ef00dd1aedfffe29548bc8d4e" prot="private" virt="non-virtual"><scope>UML_Diagram_Generator::Program::InterfaceUsage</scope><name>_typeName</name></member>
+      <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_usage_1af4dc16f9002743ec2c42e2eee4f5f19a" prot="public" virt="non-virtual"><scope>UML_Diagram_Generator::Program::InterfaceUsage</scope><name>Compound</name></member>
+      <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_usage_1a0dee3a1d0280fab3fa43dd5a14f13b4d" prot="public" virt="non-virtual"><scope>UML_Diagram_Generator::Program::InterfaceUsage</scope><name>DeclaredName</name></member>
+      <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_usage_1a35ae362b8238bfb6859cddf45a8200f0" prot="public" virt="non-virtual"><scope>UML_Diagram_Generator::Program::InterfaceUsage</scope><name>node</name></member>
+      <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_usage_1a1b72875347be3ee344ff580aa522e67f" prot="public" virt="non-virtual"><scope>UML_Diagram_Generator::Program::InterfaceUsage</scope><name>Public</name></member>
+      <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_usage_1ac78143873ebe8fb5a278a22f1936e4b2" prot="public" virt="non-virtual"><scope>UML_Diagram_Generator::Program::InterfaceUsage</scope><name>Relevant</name></member>
+      <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_usage_1ab943cdc9e7f7ee2db0f9b3afabb4a6d1" prot="public" virt="non-virtual"><scope>UML_Diagram_Generator::Program::InterfaceUsage</scope><name>Resolved</name></member>
+      <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_usage_1aec53b8dbcebd7b9ba7a0d2d3f9a682e8" prot="public" virt="non-virtual"><scope>UML_Diagram_Generator::Program::InterfaceUsage</scope><name>TypeName</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="dir_fb81a37468528a670fdec90d35b8948d" kind="dir">
+    <compoundname>UML Diagram Generator</compoundname>
+    <innerdir refid="dir_7997e9e98bd2c62ddd160302bfe30d1e">UML Diagram Generator/Properties</innerdir>
+    <innerfile refid="_program_8cs">Program.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="UML Diagram Generator/"/>
+  </compounddef>
+</doxygen>

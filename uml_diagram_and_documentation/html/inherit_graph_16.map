@@ -1,0 +1,9 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_u_m_l___diagram___generator_1_1_program_1_1_u_m_l_entity.html" title="Represents a UML entity that can be represented." alt="" coords="5,100,231,141"/>
+<area shape="rect" id="node2" href="$class_u_m_l___diagram___generator_1_1_program_1_1_attribute.html" title=" " alt="" coords="293,5,519,47"/>
+<area shape="rect" id="node3" href="$class_u_m_l___diagram___generator_1_1_program_1_1_method.html" title=" " alt="" coords="293,71,519,112"/>
+<area shape="rect" id="node4" href="$class_u_m_l___diagram___generator_1_1_program_1_1_node.html" title=" " alt="" coords="279,137,533,163"/>
+<area shape="rect" id="node7" href="$class_u_m_l___diagram___generator_1_1_program_1_1_package.html" title=" " alt="" coords="293,188,519,229"/>
+<area shape="rect" id="node5" href="$class_u_m_l___diagram___generator_1_1_program_1_1_class_node.html" title=" " alt="" coords="581,96,807,137"/>
+<area shape="rect" id="node6" href="$class_u_m_l___diagram___generator_1_1_program_1_1_interface_node.html" title=" " alt="" coords="581,161,807,203"/>
+</map>

@@ -1,0 +1,453 @@
+\hypertarget{class_u_m_l___diagram___generator_1_1_program}{}\doxysection{U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Program Class Reference}
+\label{class_u_m_l___diagram___generator_1_1_program}\index{UML\_Diagram\_Generator.Program@{UML\_Diagram\_Generator.Program}}
+
+
+Collaboration diagram for U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Program\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{class_u_m_l___diagram___generator_1_1_program__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_attribute}{Attribute}}
+\item 
+class \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_class_node}{Class\+Node}}
+\item 
+class \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_class_usage}{Class\+Usage}}
+\item 
+class \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_doxygen_runner}{Doxygen\+Runner}}
+\item 
+class \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_file_dot_engine}{File\+Dot\+Engine}}
+\item 
+class \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_interface_node}{Interface\+Node}}
+\item 
+class \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_interface_usage}{Interface\+Usage}}
+\item 
+class \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_method}{Method}}
+\item 
+class \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_node}{Node}}
+\item 
+class \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_package}{Package}}
+\item 
+class \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_u_m_l_entity}{U\+M\+L\+Entity}}
+\begin{DoxyCompactList}\small\item\em Represents a U\+ML entity that can be represented. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_usage}{Usage}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_a5f2dfed1b8b900b321af1eaca03af23f}{Main}} (string\mbox{[}$\,$\mbox{]} args)
+\begin{DoxyCompactList}\small\item\em Call the program either with or without arguments specifying in which folder it should run. \end{DoxyCompactList}\item 
+static List$<$ \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_u_m_l_entity}{U\+M\+L\+Entity}} $>$ \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_a0fa6d432a7ad24491e78fcf92cbc2617}{Parse\+Doxygen\+Structure}} (string folder)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_ad3cd0807ed7edb9fdd382aa7978be178}{Package}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 50 of file Program.\+cs.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_m_l___diagram___generator_1_1_program_a5f2dfed1b8b900b321af1eaca03af23f}\label{class_u_m_l___diagram___generator_1_1_program_a5f2dfed1b8b900b321af1eaca03af23f}} 
+\index{UML\_Diagram\_Generator.Program@{UML\_Diagram\_Generator.Program}!Main@{Main}}
+\index{Main@{Main}!UML\_Diagram\_Generator.Program@{UML\_Diagram\_Generator.Program}}
+\doxysubsubsection{\texorpdfstring{Main()}{Main()}}
+{\footnotesize\ttfamily static void U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Program.\+Main (\begin{DoxyParamCaption}\item[{string\mbox{[}$\,$\mbox{]}}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Call the program either with or without arguments specifying in which folder it should run. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 56 of file Program.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{57         \{}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59             \textcolor{comment}{//Ensure working directory is proper so doxyfile is retrievable.}}
+\DoxyCodeLine{60             Directory.SetCurrentDirectory(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62             \textcolor{keywordtype}{string} path = args.FirstOrDefault();}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64             \textcolor{keywordflow}{if} (\textcolor{keywordtype}{string}.IsNullOrEmpty(path))}
+\DoxyCodeLine{65             \{}
+\DoxyCodeLine{66                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} ArgumentException(\textcolor{stringliteral}{"Must specify path to code to analyze."});}
+\DoxyCodeLine{67             \}}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69             Console.WriteLine(\$\textcolor{stringliteral}{"Running Doxygen on \{path\}..."});}
+\DoxyCodeLine{70             Console.Out.Flush();}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73             \textcolor{comment}{//Have doxygen run with our doxyfile and make a subfolder.}}
+\DoxyCodeLine{74             DoxygenRunner.Run(path);}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76             \textcolor{keywordtype}{string} outputSubPath = \textcolor{stringliteral}{"uml\_diagram\_and\_documentation"}; \textcolor{comment}{//must match the doxyfile! must not have slashes.}}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79             \textcolor{keywordtype}{string} diagramName = \textcolor{stringliteral}{"ClassDiagram"};}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82             Console.WriteLine(\$\textcolor{stringliteral}{"Parsing XML output."});}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84             \textcolor{comment}{//Use and parse the XML in the subfolder to then generete the dot and SVG of the class diagram with.}}
+\DoxyCodeLine{85             \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_ad3cd0807ed7edb9fdd382aa7978be178}{Package}} root;}
+\DoxyCodeLine{86             List<UMLEntity> parsed;}
+\DoxyCodeLine{87             (root, parsed) = \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_a0fa6d432a7ad24491e78fcf92cbc2617}{ParseDoxygenStructure}}(\$\textcolor{stringliteral}{@"\{path\}\(\backslash\)\{outputSubPath\}\(\backslash\)xml"});}
+\DoxyCodeLine{88             \textcolor{comment}{//var parsed = ParseDoxygenStructure(@"C:\(\backslash\)Users\(\backslash\)Joep\(\backslash\)source\(\backslash\)repos\(\backslash\)DatabasesTentamenCheckerConsoleApp\(\backslash\)doxygen\(\backslash\)xml");}}
+\DoxyCodeLine{89             StringBuilder result = \textcolor{keyword}{new} StringBuilder();}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92             root.OutputSelf(result);}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94             \textcolor{keywordflow}{foreach} (var item \textcolor{keywordflow}{in} parsed)}
+\DoxyCodeLine{95             \{}
+\DoxyCodeLine{96                 \textcolor{comment}{// item.OutputSelf(result);}}
+\DoxyCodeLine{97                 \textcolor{comment}{//    result.AppendLine();}}
+\DoxyCodeLine{98             \}}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100             \textcolor{keywordflow}{foreach} (var item \textcolor{keywordflow}{in} parsed.Where(p => p is Node))}
+\DoxyCodeLine{101             \{}
+\DoxyCodeLine{102                 (item as Node).OutputRelations(result);}
+\DoxyCodeLine{103                 result.AppendLine();}
+\DoxyCodeLine{104             \}}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106             String \textcolor{keyword}{template} = \$\textcolor{stringliteral}{@"  digraph \{diagramName\} \{\{}}
+\DoxyCodeLine{107 \textcolor{stringliteral}{              fontname = ""Consolas""}}
+\DoxyCodeLine{108 \textcolor{stringliteral}{              fontsize = 8}}
+\DoxyCodeLine{109 \textcolor{stringliteral}{}}
+\DoxyCodeLine{110 \textcolor{stringliteral}{              node [}}
+\DoxyCodeLine{111 \textcolor{stringliteral}{                      fontname = ""Consolas""}}
+\DoxyCodeLine{112 \textcolor{stringliteral}{                      fontsize = 8}}
+\DoxyCodeLine{113 \textcolor{stringliteral}{                      shape = ""record""}}
+\DoxyCodeLine{114 \textcolor{stringliteral}{              ]}}
+\DoxyCodeLine{115 \textcolor{stringliteral}{}}
+\DoxyCodeLine{116 \textcolor{stringliteral}{              edge [}}
+\DoxyCodeLine{117 \textcolor{stringliteral}{                      fontname = ""Consolas""}}
+\DoxyCodeLine{118 \textcolor{stringliteral}{                      fontsize = 8}}
+\DoxyCodeLine{119 \textcolor{stringliteral}{              ]}}
+\DoxyCodeLine{120 \textcolor{stringliteral}{              \{result.ToString()\}}}
+\DoxyCodeLine{121 \textcolor{stringliteral}{  \}\}}}
+\DoxyCodeLine{122 \textcolor{stringliteral}{  "};}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124             \textcolor{keywordtype}{string} outputFileClassDiagram = \$\textcolor{stringliteral}{"\{path\}/\{outputSubPath\}/\{diagramName\}"};}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{126 }
+\DoxyCodeLine{127             Console.WriteLine(\$\textcolor{stringliteral}{"Running DOT to generate class diagram..."});}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{129             FileDotEngine.Run(\textcolor{keyword}{template}, outputFileClassDiagram);}
+\DoxyCodeLine{130 }
+\DoxyCodeLine{131             \textcolor{comment}{/*            if(args.Length<1)}}
+\DoxyCodeLine{132 \textcolor{comment}{                        \{}}
+\DoxyCodeLine{133 \textcolor{comment}{                            if(!Directory.Exists(args[0]))}}
+\DoxyCodeLine{134 \textcolor{comment}{                            \{}}
+\DoxyCodeLine{135 \textcolor{comment}{                                throw new ArgumentException("specified directory does not exist.");}}
+\DoxyCodeLine{136 \textcolor{comment}{                            \}}}
+\DoxyCodeLine{137 \textcolor{comment}{                            Directory.SetCurrentDirectory(args[0]);}}
+\DoxyCodeLine{138 \textcolor{comment}{                        \}}}
+\DoxyCodeLine{139 \textcolor{comment}{                        ParseDoxygenStructure(".");*/}}
+\DoxyCodeLine{140 }
+\DoxyCodeLine{141 }
+\DoxyCodeLine{142             Console.WriteLine(\$\textcolor{stringliteral}{"Opening classdiagram..."});}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144             System.Diagnostics.Process.Start(\$\textcolor{stringliteral}{"\{outputFileClassDiagram\}.svg"});}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{146             Console.WriteLine(\$\textcolor{stringliteral}{"Done."});}
+\DoxyCodeLine{147         \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_m_l___diagram___generator_1_1_program_a5f2dfed1b8b900b321af1eaca03af23f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_m_l___diagram___generator_1_1_program_a0fa6d432a7ad24491e78fcf92cbc2617}\label{class_u_m_l___diagram___generator_1_1_program_a0fa6d432a7ad24491e78fcf92cbc2617}} 
+\index{UML\_Diagram\_Generator.Program@{UML\_Diagram\_Generator.Program}!ParseDoxygenStructure@{ParseDoxygenStructure}}
+\index{ParseDoxygenStructure@{ParseDoxygenStructure}!UML\_Diagram\_Generator.Program@{UML\_Diagram\_Generator.Program}}
+\doxysubsubsection{\texorpdfstring{ParseDoxygenStructure()}{ParseDoxygenStructure()}}
+{\footnotesize\ttfamily static List$<$\mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_u_m_l_entity}{U\+M\+L\+Entity}}$>$ U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Program.\+Parse\+Doxygen\+Structure (\begin{DoxyParamCaption}\item[{string}]{folder }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+if(item.)
+
+Definition at line 151 of file Program.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{152         \{}
+\DoxyCodeLine{153             XDocument doc = XDocument.Load(Path.Combine(folder, \textcolor{stringliteral}{"index.xml"}));}
+\DoxyCodeLine{154 }
+\DoxyCodeLine{155             var relevant = \textcolor{keyword}{new} HashSet<string> \{ \textcolor{stringliteral}{"class"}, \textcolor{stringliteral}{"interface"} \};}
+\DoxyCodeLine{156 }
+\DoxyCodeLine{157             var namespaces = doc.Descendants(\textcolor{stringliteral}{"compound"}).Where(c => c.Attribute(\textcolor{stringliteral}{"kind"}).Value.ToLower() == \textcolor{stringliteral}{"namespace"});}
+\DoxyCodeLine{158 }
+\DoxyCodeLine{159             \textcolor{comment}{//Redelijk veel werk; todo voor later.}}
+\DoxyCodeLine{160             \textcolor{comment}{/*          Dictionary<string,Package> packages = new Dictionary<string,Package>();}}
+\DoxyCodeLine{161 \textcolor{comment}{}}
+\DoxyCodeLine{162 \textcolor{comment}{                      foreach (var n in namespaces)}}
+\DoxyCodeLine{163 \textcolor{comment}{                      \{}}
+\DoxyCodeLine{164 \textcolor{comment}{                          string[] hierarchy = n.Element("name").Value.Split(new string[] \{ "xx" \},StringSplitOptions.None);}}
+\DoxyCodeLine{165 \textcolor{comment}{}}
+\DoxyCodeLine{166 \textcolor{comment}{                          bool first = true;}}
+\DoxyCodeLine{167 \textcolor{comment}{                          foreach (var item in hierarchy)}}
+\DoxyCodeLine{168 \textcolor{comment}{                          \{}}
+\DoxyCodeLine{169 \textcolor{comment}{                              if(first)}}
+\DoxyCodeLine{170 \textcolor{comment}{                              \{}}
+\DoxyCodeLine{171 \textcolor{comment}{                                  if(!packages.ContainsKey(item))}}
+\DoxyCodeLine{172 \textcolor{comment}{                                  \{}}
+\DoxyCodeLine{173 \textcolor{comment}{                                      packages[item] = new Package() \{ Name = item \};}}
+\DoxyCodeLine{174 \textcolor{comment}{                                  \}}}
+\DoxyCodeLine{175 \textcolor{comment}{                              \}}}
+\DoxyCodeLine{176 \textcolor{comment}{                              else}}
+\DoxyCodeLine{177 \textcolor{comment}{                              \{}}
+\DoxyCodeLine{178 \textcolor{comment}{}}
+\DoxyCodeLine{179 \textcolor{comment}{                              \}}}
+\DoxyCodeLine{180 \textcolor{comment}{                          \}}}
+\DoxyCodeLine{181 \textcolor{comment}{}}
+\DoxyCodeLine{182 \textcolor{comment}{                      \}}}
+\DoxyCodeLine{183 \textcolor{comment}{            */}}
+\DoxyCodeLine{184 }
+\DoxyCodeLine{185             List<UMLEntity> umlEntities = \textcolor{keyword}{new} List<UMLEntity>();}
+\DoxyCodeLine{186 }
+\DoxyCodeLine{187 }
+\DoxyCodeLine{188 }
+\DoxyCodeLine{189             var elementsToMap = doc.Descendants(\textcolor{stringliteral}{"compound"}).Where(c => relevant.Contains(c.Attribute(\textcolor{stringliteral}{"kind"}).Value.ToLowerInvariant()));}
+\DoxyCodeLine{190 }
+\DoxyCodeLine{191             \textcolor{keywordflow}{foreach} (var element \textcolor{keywordflow}{in} elementsToMap)}
+\DoxyCodeLine{192             \{}
+\DoxyCodeLine{193                 \textcolor{keywordtype}{string} nodeDocUrl = Path.Combine(folder, element.Attribute(\textcolor{stringliteral}{"refid"}).Value + \textcolor{stringliteral}{".xml"});}
+\DoxyCodeLine{194                 XDocument nodeDoc = XDocument.Load(nodeDocUrl);}
+\DoxyCodeLine{195 }
+\DoxyCodeLine{196                 \textcolor{comment}{//Create a node of the correct type.}}
+\DoxyCodeLine{197                 Node node;}
+\DoxyCodeLine{198                 \textcolor{keywordtype}{string} elementType = element.Attribute(\textcolor{stringliteral}{"kind"}).Value.ToLowerInvariant();}
+\DoxyCodeLine{199                 \textcolor{keywordflow}{switch} (elementType)}
+\DoxyCodeLine{200                 \{}
+\DoxyCodeLine{201                     \textcolor{keywordflow}{case} \textcolor{stringliteral}{"interface"}:}
+\DoxyCodeLine{202                         node = \textcolor{keyword}{new} InterfaceNode();}
+\DoxyCodeLine{203                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{204                     \textcolor{keywordflow}{case} \textcolor{stringliteral}{"class"}:}
+\DoxyCodeLine{205                         node = \textcolor{keyword}{new} ClassNode();}
+\DoxyCodeLine{206                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{207                     \textcolor{keywordflow}{default}: \textcolor{keywordflow}{throw} \textcolor{keyword}{new} NotImplementedException(\$\textcolor{stringliteral}{"No implementation exists for a node of type \{elementType\}, encountered in \{nodeDocUrl\}"});}
+\DoxyCodeLine{208                 \}}
+\DoxyCodeLine{209                 umlEntities.Add(node);}
+\DoxyCodeLine{210 }
+\DoxyCodeLine{211                 node.Name = element.Element(\textcolor{stringliteral}{"name"}).Value;}
+\DoxyCodeLine{212 }
+\DoxyCodeLine{213                 \textcolor{comment}{//Find directly inherited node.}}
+\DoxyCodeLine{214 }
+\DoxyCodeLine{215                 \textcolor{comment}{// inheritancegraph.node[@id = inheritancegraph.node[@id = 1].childnode@refId]}}
+\DoxyCodeLine{216 }
+\DoxyCodeLine{217                 var inheritance = nodeDoc.Descendants(\textcolor{stringliteral}{"inheritancegraph"}).FirstOrDefault();}
+\DoxyCodeLine{218 }
+\DoxyCodeLine{219                 \textcolor{keywordflow}{if} (inheritance != \textcolor{keyword}{null})}
+\DoxyCodeLine{220                 \{}
+\DoxyCodeLine{221                     \textcolor{keywordflow}{foreach} (var inheritee \textcolor{keywordflow}{in} inheritance.Descendants(\textcolor{stringliteral}{"node"}).First(n => n.Attribute(\textcolor{stringliteral}{"id"}).Value == \textcolor{stringliteral}{"1"}).Elements(\textcolor{stringliteral}{"childnode"}).Select(c => c.Attribute(\textcolor{stringliteral}{"refid"}).Value))}
+\DoxyCodeLine{222                     \{}
+\DoxyCodeLine{223                         \textcolor{keywordtype}{string} name = inheritance.Descendants(\textcolor{stringliteral}{"node"}).First(n => n.Attribute(\textcolor{stringliteral}{"id"}).Value == inheritee).Element(\textcolor{stringliteral}{"label"}).Value;}
+\DoxyCodeLine{224                         node.Inherits.Add(\textcolor{keyword}{new} Usage \{ TypeName = name \});}
+\DoxyCodeLine{225                     \}}
+\DoxyCodeLine{226                 \}}
+\DoxyCodeLine{227 }
+\DoxyCodeLine{228                 \textcolor{comment}{//Populate attributes and methods.}}
+\DoxyCodeLine{229                 \textcolor{keywordflow}{foreach} (var member \textcolor{keywordflow}{in} nodeDoc.Descendants(\textcolor{stringliteral}{"memberdef"}))}
+\DoxyCodeLine{230                 \{}
+\DoxyCodeLine{231                     \textcolor{keywordtype}{string} memberType = member.Attribute(\textcolor{stringliteral}{"kind"}).Value.ToLowerInvariant();}
+\DoxyCodeLine{232                     \textcolor{keywordflow}{switch} (memberType)}
+\DoxyCodeLine{233                     \{}
+\DoxyCodeLine{234                         \textcolor{keywordflow}{case} \textcolor{stringliteral}{"function"}:}
+\DoxyCodeLine{235                             node.Methods.Add(\textcolor{keyword}{new} Method}
+\DoxyCodeLine{236                             \{}
+\DoxyCodeLine{237                                 Name = member.Element(\textcolor{stringliteral}{"name"}).Value,}
+\DoxyCodeLine{238                                 Public = member.Attribute(\textcolor{stringliteral}{"prot"}).Value.ToLowerInvariant() == \textcolor{stringliteral}{"public"},}
+\DoxyCodeLine{239                                 Type = member.Element(\textcolor{stringliteral}{"type"}).Value}
+\DoxyCodeLine{240                             \});}
+\DoxyCodeLine{241 }
+\DoxyCodeLine{242                             \textcolor{comment}{//Check what the function's code references and then produce dependencies or associations for it.}}
+\DoxyCodeLine{243                             \textcolor{comment}{//e.g.class\_database\_examination\_1\_1\_examination\_1a65be916fcc856e6723cd6ae471b1b51a means that class\_database\_examination\_1\_1\_examination is used.}}
+\DoxyCodeLine{244 }
+\DoxyCodeLine{245                             \textcolor{comment}{//Todo: perhaps all the code should use the reference Ids that are used by doxygen? this will prevent name collissions between namespaces.}}
+\DoxyCodeLine{246                             var referencedClassesIds = member.Descendants(\textcolor{stringliteral}{"references"}).Select(e => e.Attribute(\textcolor{stringliteral}{"refid"}).Value.WithoutGuid()).ToList();}
+\DoxyCodeLine{247 }
+\DoxyCodeLine{248                             var referencedCompounds = doc.Descendants(\textcolor{stringliteral}{"compound"}).Where(c => referencedClassesIds.Contains(c.Attribute(\textcolor{stringliteral}{"refid"}).Value)).ToList();}
+\DoxyCodeLine{249 }
+\DoxyCodeLine{250                             \textcolor{keywordflow}{foreach} (var item \textcolor{keywordflow}{in} referencedCompounds)}
+\DoxyCodeLine{251                             \{}
+\DoxyCodeLine{252                                 var usage = \textcolor{keyword}{new} Usage \{ Public = \textcolor{keyword}{false}, TypeName = item.Element(\textcolor{stringliteral}{"name"}).Value.NoNameSpaces() \};}
+\DoxyCodeLine{253 }
+\DoxyCodeLine{254                                 \textcolor{comment}{//Avoid duplication, and don't self-\/reference for 'dependency' or 'association'; that is superfluous.}}
+\DoxyCodeLine{255                                 \textcolor{keywordflow}{if} (!node.Uses.Any(u => u.TypeName == usage.TypeName \&\& u.Public == usage.Public) \&\& usage.TypeName != node.Name.NoNameSpaces())}
+\DoxyCodeLine{256                                 \{}
+\DoxyCodeLine{257                                     node.Uses.Add(usage);}
+\DoxyCodeLine{258                                 \}}
+\DoxyCodeLine{259 }
+\DoxyCodeLine{260                                 ;}
+\DoxyCodeLine{262                             \}}
+\DoxyCodeLine{263 }
+\DoxyCodeLine{264 }
+\DoxyCodeLine{265                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{266                         \textcolor{keywordflow}{case} \textcolor{stringliteral}{"property"}:}
+\DoxyCodeLine{267                         \textcolor{keywordflow}{case} \textcolor{stringliteral}{"variable"}:}
+\DoxyCodeLine{268 }
+\DoxyCodeLine{269                             \textcolor{comment}{//Check cardinality}}
+\DoxyCodeLine{270                             \textcolor{comment}{//Also, usages may not just be of a 'string' or built in type, but of types on the class diagram being printed.}}
+\DoxyCodeLine{271                             \textcolor{comment}{//In that case, make UML links, not mentions of attributes; we cannot find that out yet.}}
+\DoxyCodeLine{272 }
+\DoxyCodeLine{273                             \textcolor{comment}{//Annoying piece of XML: <type>List\&lt; <ref refid="class\_database\_examination\_1\_1\_assertion" kindref="compound">Assertion</ref> \&gt;</type>}}
+\DoxyCodeLine{274 }
+\DoxyCodeLine{275 }
+\DoxyCodeLine{276                             \textcolor{comment}{//bool compound = member.Element("type").Attribute("kindref") != null \&\& member.Element("type").Attribute("kindref").Value.ToLowerInvariant() == "compound";}}
+\DoxyCodeLine{277                             \textcolor{keywordtype}{bool} compound = member.Element(\textcolor{stringliteral}{"type"}).Element(\textcolor{stringliteral}{"ref"}) != \textcolor{keyword}{null} \&\&}
+\DoxyCodeLine{278                             member.Element(\textcolor{stringliteral}{"type"}).Element(\textcolor{stringliteral}{"ref"}).Attribute(\textcolor{stringliteral}{"kindref"}).Value.ToLowerInvariant() == \textcolor{stringliteral}{"compound"};}
+\DoxyCodeLine{279                             \textcolor{keywordtype}{string} typeName = compound ? member.Element(\textcolor{stringliteral}{"type"}).Element(\textcolor{stringliteral}{"ref"}).Value : member.Element(\textcolor{stringliteral}{"type"}).Value;}
+\DoxyCodeLine{280 }
+\DoxyCodeLine{281                             var use = \textcolor{keyword}{new} Usage \{ TypeName = typeName, Compound = compound, DeclaredName = member.Element(\textcolor{stringliteral}{"name"}).Value \};}
+\DoxyCodeLine{282 }
+\DoxyCodeLine{283                             node.Uses.Add(use);}
+\DoxyCodeLine{284 }
+\DoxyCodeLine{285                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{286                         \textcolor{keywordflow}{default}: \textcolor{keywordflow}{throw} \textcolor{keyword}{new} NotImplementedException(\$\textcolor{stringliteral}{"No implementation exists for a member of type \{memberType\}, encountered in \{nodeDocUrl\}"});}
+\DoxyCodeLine{287                     \}}
+\DoxyCodeLine{288                 \}}
+\DoxyCodeLine{289 }
+\DoxyCodeLine{290 }
+\DoxyCodeLine{291 }
+\DoxyCodeLine{292             \}}
+\DoxyCodeLine{293 }
+\DoxyCodeLine{294             \textcolor{comment}{//Resolve uses by classes and interfaces.}}
+\DoxyCodeLine{295             var nodes = umlEntities.Select(n => n as Node).Where(n => n != \textcolor{keyword}{null});}
+\DoxyCodeLine{296             Dictionary<string, Node> lookup = nodes.ToDictionary(k => k.Name, v => v);}
+\DoxyCodeLine{297 }
+\DoxyCodeLine{298             \textcolor{keywordflow}{foreach} (var node \textcolor{keywordflow}{in} nodes)}
+\DoxyCodeLine{299             \{}
+\DoxyCodeLine{300                 node.ResolveUses(lookup);}
+\DoxyCodeLine{301             \}}
+\DoxyCodeLine{302 }
+\DoxyCodeLine{303             \textcolor{comment}{//Determine package structure}}
+\DoxyCodeLine{304 }
+\DoxyCodeLine{305             List<List<string>> hierarchies = umlEntities.Select(n => n.Name.GetNameSpaceHierarchy()).Distinct().ToList();}
+\DoxyCodeLine{306 }
+\DoxyCodeLine{307             \textcolor{keywordtype}{bool} singleRoot = hierarchies.Select(h => h.First()).Distinct().Count() == 1;}
+\DoxyCodeLine{308 }
+\DoxyCodeLine{309             \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_ad3cd0807ed7edb9fdd382aa7978be178}{Package}} root;}
+\DoxyCodeLine{310 }
+\DoxyCodeLine{311             \textcolor{keywordflow}{if} (singleRoot)}
+\DoxyCodeLine{312             \{}
+\DoxyCodeLine{313                 root = \textcolor{keyword}{new} \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_ad3cd0807ed7edb9fdd382aa7978be178}{Package}}() \{ Name = hierarchies.First().First() \};}
+\DoxyCodeLine{314             \}}
+\DoxyCodeLine{315             \textcolor{keywordflow}{else} \textcolor{comment}{//Create a virtual root.}}
+\DoxyCodeLine{316             \{}
+\DoxyCodeLine{317                 root = \textcolor{keyword}{new} \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_ad3cd0807ed7edb9fdd382aa7978be178}{Package}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{318             \}}
+\DoxyCodeLine{319 }
+\DoxyCodeLine{320             \textcolor{keywordflow}{foreach} (var hierarchy \textcolor{keywordflow}{in} hierarchies)}
+\DoxyCodeLine{321             \{}
+\DoxyCodeLine{322                 \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_ad3cd0807ed7edb9fdd382aa7978be178}{Package}} previous = root;}
+\DoxyCodeLine{323                 \textcolor{keywordtype}{int} start = root.IsVirtual ? 0 : 1;  \textcolor{comment}{//handle root properly, first element is skipped if it always contains a 'real' root.}}
+\DoxyCodeLine{324                 \textcolor{keywordflow}{foreach} (\textcolor{keywordtype}{string} name \textcolor{keywordflow}{in} hierarchy)}
+\DoxyCodeLine{325                 \{}
+\DoxyCodeLine{326                     \textcolor{comment}{//Either navigate into the underlying package of the package above, or create it as required.}}
+\DoxyCodeLine{327                     \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_ad3cd0807ed7edb9fdd382aa7978be178}{Package}} \textcolor{keyword}{package }= previous.Get(name);}
+\DoxyCodeLine{328 }
+\DoxyCodeLine{329                     \textcolor{keywordflow}{if} (package == \textcolor{keyword}{null})}
+\DoxyCodeLine{330                     \{}
+\DoxyCodeLine{331                         \textcolor{keyword}{package }= new Package() \{ Name = name \};}
+\DoxyCodeLine{332                         previous.Packages.Add(package);}
+\DoxyCodeLine{333                     \}}
+\DoxyCodeLine{334                     previous = package;}
+\DoxyCodeLine{335                 \}}
+\DoxyCodeLine{336             \}}
+\DoxyCodeLine{337 }
+\DoxyCodeLine{338             \textcolor{keywordflow}{foreach} (Node node \textcolor{keywordflow}{in} umlEntities)}
+\DoxyCodeLine{339             \{}
+\DoxyCodeLine{340                 List<string> packages = node.Name.GetNameSpaceHierarchy().TakeWhile(n => n.NoNameSpaces() != node.Name.NoNameSpaces()).ToList();}
+\DoxyCodeLine{341                 packages = (!root.IsVirtual) ? packages : packages.Skip(1).ToList(); \textcolor{comment}{//Dont try to add root to root.}}
+\DoxyCodeLine{342 }
+\DoxyCodeLine{343                 \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_ad3cd0807ed7edb9fdd382aa7978be178}{Package}} targetPackage = root;}
+\DoxyCodeLine{344                 \textcolor{keywordflow}{foreach} (var p \textcolor{keywordflow}{in} packages)}
+\DoxyCodeLine{345                 \{}
+\DoxyCodeLine{346                     targetPackage = targetPackage.Get(p);}
+\DoxyCodeLine{347                 \}}
+\DoxyCodeLine{348 }
+\DoxyCodeLine{349                 targetPackage.Nodes.Add(node);}
+\DoxyCodeLine{350             \}}
+\DoxyCodeLine{351 }
+\DoxyCodeLine{352             \textcolor{keywordflow}{return} (root, umlEntities);}
+\DoxyCodeLine{353         \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_m_l___diagram___generator_1_1_program_a0fa6d432a7ad24491e78fcf92cbc2617_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_m_l___diagram___generator_1_1_program_a0fa6d432a7ad24491e78fcf92cbc2617_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_u_m_l___diagram___generator_1_1_program_ad3cd0807ed7edb9fdd382aa7978be178}\label{class_u_m_l___diagram___generator_1_1_program_ad3cd0807ed7edb9fdd382aa7978be178}} 
+\index{UML\_Diagram\_Generator.Program@{UML\_Diagram\_Generator.Program}!Package@{Package}}
+\index{Package@{Package}!UML\_Diagram\_Generator.Program@{UML\_Diagram\_Generator.Program}}
+\doxysubsubsection{\texorpdfstring{Package}{Package}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_package}{U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Program.\+Package}}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{path\}\(\backslash\)\{outputSubPath\}\(\backslash\)xml\textcolor{stringliteral}{"  digraph \{diagramName\} \{\{}}
+\DoxyCodeLine{\textcolor{stringliteral}{              fontname = "}\textcolor{stringliteral}{"Consolas"}\textcolor{stringliteral}{"}}
+\DoxyCodeLine{\textcolor{stringliteral}{              fontsize = 8}}
+\DoxyCodeLine{\textcolor{stringliteral}{}}
+\DoxyCodeLine{\textcolor{stringliteral}{              node [}}
+\DoxyCodeLine{\textcolor{stringliteral}{                      fontname = "}\textcolor{stringliteral}{"Consolas"}\textcolor{stringliteral}{"}}
+\DoxyCodeLine{\textcolor{stringliteral}{                      fontsize = 8}}
+\DoxyCodeLine{\textcolor{stringliteral}{                      shape = "}\textcolor{stringliteral}{"record"}\textcolor{stringliteral}{"}}
+\DoxyCodeLine{\textcolor{stringliteral}{              ]}}
+\DoxyCodeLine{\textcolor{stringliteral}{}}
+\DoxyCodeLine{\textcolor{stringliteral}{              edge [}}
+\DoxyCodeLine{\textcolor{stringliteral}{                      fontname = "}\textcolor{stringliteral}{"Consolas"}\textcolor{stringliteral}{"}}
+\DoxyCodeLine{\textcolor{stringliteral}{                      fontsize = 8}}
+\DoxyCodeLine{\textcolor{stringliteral}{              ]}}
+\DoxyCodeLine{\textcolor{stringliteral}{              \{result.ToString()\}}}
+\DoxyCodeLine{\textcolor{stringliteral}{  \}\}}}
+\DoxyCodeLine{\textcolor{stringliteral}{  "}}
+
+\end{DoxyCode}
+
+
+Definition at line 151 of file Program.\+cs.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+U\+M\+L Diagram Generator/\mbox{\hyperlink{_program_8cs}{Program.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>UML-Class-Diagram-Generator</highlight></codeline>
+<codeline><highlight class="normal">Generates<sp/>class<sp/>diagrams<sp/>from<sp/>doxygen<sp/>XML<sp/>with<sp/>callgraphs<sp/>generated.</highlight></codeline>
+<codeline><highlight class="normal">Currently<sp/>work<sp/>in<sp/>progress.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Purpose</highlight></codeline>
+<codeline><highlight class="normal">Doxygen<sp/>is<sp/>a<sp/>great<sp/>tool,<sp/>but<sp/>it<sp/>is<sp/>lackluster<sp/>in<sp/>terms<sp/>of<sp/>class<sp/>diagrams.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Adding<sp/>these<sp/>can<sp/>be<sp/>done<sp/>by<sp/>some<sp/>tools,<sp/>for<sp/>example<sp/>using<sp/>[doxygraph](https://github.com/jitsuCM/doxygraph)<sp/>(non-cannonical<sp/>link).</highlight></codeline>
+<codeline><highlight class="normal">However,<sp/>Doxygraph<sp/>is<sp/>written<sp/>in<sp/>Perl<sp/>and<sp/>tricky<sp/>to<sp/>use<sp/>properly.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>UML-Class-Diagram-Generator<sp/>should<sp/>be<sp/>able<sp/>to<sp/>output<sp/>a<sp/>class<sp/>diagram<sp/>without<sp/>much<sp/>hassle,<sp/>provided<sp/>you<sp/>can<sp/>run<sp/>.NET<sp/>on<sp/>your<sp/>platform</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Usage</highlight></codeline>
+<codeline><highlight class="normal">To<sp/>use<sp/>this<sp/>code,<sp/>use<sp/>the<sp/>supplied<sp/>Doxyfile<sp/>on<sp/>source<sp/>code<sp/>with<sp/>doxygen<sp/>and<sp/>point<sp/>the<sp/>program.cs<sp/>Main<sp/>method<sp/>to<sp/>the<sp/>generated<sp/>xml<sp/>folder</highlight></codeline>
+<codeline><highlight class="normal">Doxygen<sp/>and<sp/>Graphviz<sp/>(the<sp/>latter<sp/>must<sp/>be<sp/>manually<sp/>added<sp/>to<sp/>Path<sp/>variable)<sp/>are<sp/>required.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Steps:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>Install<sp/>doxygen</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>Install<sp/>graphviz</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>Add<sp/>Graphviz<sp/>to<sp/>Path<sp/>variable<sp/>in<sp/>windows<sp/>(so<sp/>that<sp/>opening<sp/>a<sp/>cmd.exe<sp/>window<sp/>and<sp/>typing<sp/>dot<sp/>launches<sp/>that<sp/>program)</highlight></codeline>
+<codeline><highlight class="normal">4.<sp/>Run<sp/>doxygen<sp/>on<sp/>the<sp/>folder<sp/>containing<sp/>the<sp/>DoxyFile<sp/>(for<sp/>example<sp/>in<sp/>this<sp/>repository<sp/>itself)</highlight></codeline>
+<codeline><highlight class="normal">5.<sp/>Modify<sp/>the<sp/>program.cs<sp/>to<sp/>point<sp/>to<sp/>the<sp/>folder<sp/>with<sp/>the<sp/>xml<sp/>output<sp/>generated<sp/>(relative<sp/>to<sp/>doxyfile<sp/>this<sp/>is<sp/>./doxygen/xml)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Example<sp/>result.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>code<sp/>is<sp/>still<sp/>a<sp/>work<sp/>in<sp/>progress..</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">![Example<sp/>class<sp/>diagram<sp/>generated<sp/>from<sp/>this<sp/>repository](https://raw.githubusercontent.com/Joeppie/UML-Class-Diagram-Generator/master/TestImage.svg?sanitize=true)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Yes,<sp/>this<sp/>diagram<sp/>is<sp/>the<sp/>source<sp/>code<sp/>of<sp/>this<sp/>repository<sp/>itself,<sp/>represented<sp/>as<sp/>a<sp/>class<sp/>diagram.<sp/>I<sp/>should<sp/>add<sp/>interfaces,<sp/>to<sp/>demonstrate<sp/>how<sp/>these<sp/>are<sp/>correctly<sp/>displayed<sp/>*(Doxygen<sp/>currently<sp/>incorrectly<sp/>displays<sp/>implementations<sp/>of<sp/>interfaces<sp/>as<sp/>inheritance<sp/>from<sp/>the<sp/>interface.)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Sadly,<sp/>not<sp/>all<sp/>uses<sp/>of<sp/>classes/interfaces<sp/>(dependency<sp/>and<sp/>uses)<sp/>are<sp/>correctly<sp/>recognized;<sp/>this<sp/>seems<sp/>to<sp/>be<sp/>a<sp/>bug<sp/>in<sp/>Doxygen&apos;s<sp/>C#<sp/>support,<sp/>as<sp/>they<sp/>are<sp/>missing<sp/>from<sp/>the<sp/>XML<sp/>this<sp/>tool<sp/>bases<sp/>on,<sp/>but<sp/>has<sp/>not<sp/>yet<sp/>been<sp/>reported.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>License</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">GNU<sp/>Affero<sp/>for<sp/>now.</highlight></codeline>
+<codeline><highlight class="normal">Use<sp/>this<sp/>work<sp/>for<sp/>whatever<sp/>purpose<sp/>you<sp/>may<sp/>want,<sp/>as<sp/>long<sp/>as<sp/>you<sp/>redistribute<sp/>modified<sp/>or<sp/>derived<sp/>sources<sp/>of<sp/>the<sp/>code,<sp/>as<sp/>per<sp/>the<sp/>GNU<sp/>Affero<sp/>license.<sp/>https://en.wikipedia.org/wiki/Affero_General_Public_License.</highlight></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_u_m_l___diagram___generator_1_1_extensions" kind="class" language="C#" prot="public">
+    <compoundname>UML_Diagram_Generator::Extensions</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_u_m_l___diagram___generator_1_1_extensions_1a451a8c86dcafa5538669ca3e485987e8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string UML_Diagram_Generator.Extensions.Escape</definition>
+        <argsstring>(this string s)</argsstring>
+        <name>Escape</name>
+        <param>
+          <type>this string</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="UML Diagram Generator/Program.cs" line="17" column="30" bodyfile="UML Diagram Generator/Program.cs" bodystart="17" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_u_m_l___diagram___generator_1_1_extensions_1ac324bf08fe76ac36cdfbc82e914f8c4c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string UML_Diagram_Generator.Extensions.Safe</definition>
+        <argsstring>(this string s)</argsstring>
+        <name>Safe</name>
+        <param>
+          <type>this string</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Returns a dot syntax safe version of a name to avoid problems. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="UML Diagram Generator/Program.cs" line="22" column="30" bodyfile="UML Diagram Generator/Program.cs" bodystart="22" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_u_m_l___diagram___generator_1_1_extensions_1aa5b4b7c43e4e28d521d7ea4e9deaf727" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string UML_Diagram_Generator.Extensions.NoNameSpaces</definition>
+        <argsstring>(this string s)</argsstring>
+        <name>NoNameSpaces</name>
+        <param>
+          <type>this string</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Keep just the name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="UML Diagram Generator/Program.cs" line="28" column="30" bodyfile="UML Diagram Generator/Program.cs" bodystart="28" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_u_m_l___diagram___generator_1_1_extensions_1a9fbab46d17e1cf514eaebb5ff87270eb" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; string &gt;</type>
+        <definition>static List&lt;string&gt; UML_Diagram_Generator.Extensions.GetNameSpaceHierarchy</definition>
+        <argsstring>(this string s)</argsstring>
+        <name>GetNameSpaceHierarchy</name>
+        <param>
+          <type>this string</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Keep just the name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="UML Diagram Generator/Program.cs" line="34" column="28" bodyfile="UML Diagram Generator/Program.cs" bodystart="34" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_u_m_l___diagram___generator_1_1_extensions_1a2d01b4a953958ac1b94437fc17fefc6f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string UML_Diagram_Generator.Extensions.WithoutGuid</definition>
+        <argsstring>(this string s)</argsstring>
+        <name>WithoutGuid</name>
+        <param>
+          <type>this string</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="UML Diagram Generator/Program.cs" line="43" column="30" bodyfile="UML Diagram Generator/Program.cs" bodystart="43" bodyend="46"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>UML_Diagram_Generator.Extensions</label>
+        <link refid="class_u_m_l___diagram___generator_1_1_extensions"/>
+      </node>
+    </collaborationgraph>
+    <location file="UML Diagram Generator/Program.cs" line="15" column="1" bodyfile="UML Diagram Generator/Program.cs" bodystart="14" bodyend="47"/>
+    <listofallmembers>
+      <member refid="class_u_m_l___diagram___generator_1_1_extensions_1a451a8c86dcafa5538669ca3e485987e8" prot="public" virt="non-virtual"><scope>UML_Diagram_Generator::Extensions</scope><name>Escape</name></member>
+      <member refid="class_u_m_l___diagram___generator_1_1_extensions_1a9fbab46d17e1cf514eaebb5ff87270eb" prot="public" virt="non-virtual"><scope>UML_Diagram_Generator::Extensions</scope><name>GetNameSpaceHierarchy</name></member>
+      <member refid="class_u_m_l___diagram___generator_1_1_extensions_1aa5b4b7c43e4e28d521d7ea4e9deaf727" prot="public" virt="non-virtual"><scope>UML_Diagram_Generator::Extensions</scope><name>NoNameSpaces</name></member>
+      <member refid="class_u_m_l___diagram___generator_1_1_extensions_1ac324bf08fe76ac36cdfbc82e914f8c4c" prot="public" virt="non-virtual"><scope>UML_Diagram_Generator::Extensions</scope><name>Safe</name></member>
+      <member refid="class_u_m_l___diagram___generator_1_1_extensions_1a2d01b4a953958ac1b94437fc17fefc6f" prot="public" virt="non-virtual"><scope>UML_Diagram_Generator::Extensions</scope><name>WithoutGuid</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

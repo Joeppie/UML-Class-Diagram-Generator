@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Security;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,7 +33,7 @@ namespace UML_Diagram_Generator
         /// <summary>Keep just the name.</summary>
         public static List<string> GetNameSpaceHierarchy(this string s)
         {
-            if(string.IsNullOrEmpty(s))
+            if (string.IsNullOrEmpty(s))
             {
                 return new string[0].ToList();
             }
@@ -54,13 +55,38 @@ namespace UML_Diagram_Generator
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            
+
+            //Ensure working directory is proper so doxyfile is retrievable.
+            Directory.SetCurrentDirectory(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
+
+            string path = args.FirstOrDefault();
+
+            if (string.IsNullOrEmpty(path))
+            {
+                throw new ArgumentException("Must specify path to code to analyze.");
+            }
+
+
+            path = path.Replace('\\', '/');
+            Console.WriteLine($"Running Doxygen on {path}...");
+            Console.Out.Flush();
+
+
+            //Have doxygen run with our doxyfile and make a subfolder.
+            DoxygenRunner.Run(path);
+
+            string outputSubPath = "uml_diagram_and_documentation"; //must match the doxyfile! must not have slashes.
+
 
             string diagramName = "ClassDiagram";
 
+
+            Console.WriteLine($"Parsing XML output.");
+
+            //Use and parse the XML in the subfolder to then generete the dot and SVG of the class diagram with.
             Package root;
-            List < UMLEntity> parsed;
-            (root,parsed) = ParseDoxygenStructure(@"C:\Users\J\Source\Repos\Robowars\doxygen\xml");
+            List<UMLEntity> parsed;
+            (root, parsed) = ParseDoxygenStructure($@"{path}\{outputSubPath}\xml");
             //var parsed = ParseDoxygenStructure(@"C:\Users\Joep\source\repos\DatabasesTentamenCheckerConsoleApp\doxygen\xml");
             StringBuilder result = new StringBuilder();
 
@@ -69,8 +95,8 @@ namespace UML_Diagram_Generator
 
             foreach (var item in parsed)
             {
-               // item.OutputSelf(result);
-            //    result.AppendLine();
+                // item.OutputSelf(result);
+                //    result.AppendLine();
             }
 
             foreach (var item in parsed.Where(p => p is Node))
@@ -96,9 +122,13 @@ namespace UML_Diagram_Generator
               {result.ToString()}
   }}
   ";
-            FileDotEngine.Run(template, "joeptest.svg");
+
+            string outputFileClassDiagram = $"{path}/{outputSubPath}/{diagramName}";
 
 
+            Console.WriteLine($"Running DOT to generate class diagram...");
+
+            FileDotEngine.Run(template, outputFileClassDiagram);
 
             /*            if(args.Length<1)
                         {
@@ -110,11 +140,17 @@ namespace UML_Diagram_Generator
                         }
                         ParseDoxygenStructure(".");*/
 
+
+            Console.WriteLine($"Opening classdiagram...");
+
+            System.Diagnostics.Process.Start($"{outputFileClassDiagram}.svg");
+
+            Console.WriteLine($"Done.");
         }
 
 
 
-        static (Package,List<UMLEntity>) ParseDoxygenStructure(string folder)
+        static (Package, List<UMLEntity>) ParseDoxygenStructure(string folder)
         {
             XDocument doc = XDocument.Load(Path.Combine(folder, "index.xml"));
 
@@ -215,10 +251,10 @@ namespace UML_Diagram_Generator
 
                             foreach (var item in referencedCompounds)
                             {
-                                var usage = new Usage { Public = false, TypeName = item.Element("name").Value.NoNameSpaces() };
+                                var usage = new Usage { Public = false, TypeName = item.Element("name").Value };
 
                                 //Avoid duplication, and don't self-reference for 'dependency' or 'association'; that is superfluous.
-                                if (!node.Uses.Any(u => u.TypeName == usage.TypeName && u.Public == usage.Public) && usage.TypeName != node.Name.NoNameSpaces())
+                                if (!node.Uses.Any(u => u.TypeName == usage.TypeName && u.Public == usage.Public) && usage.TypeName != node.Name)
                                 {
                                     node.Uses.Add(usage);
                                 }
@@ -259,7 +295,7 @@ namespace UML_Diagram_Generator
 
             //Resolve uses by classes and interfaces.
             var nodes = umlEntities.Select(n => n as Node).Where(n => n != null);
-            Dictionary<string, Node> lookup = nodes.ToDictionary(k => k.Name.NoNameSpaces(), v => v);
+            Dictionary<string, Node> lookup = nodes.ToDictionary(k => k.Name, v => v);
 
             foreach (var node in nodes)
             {
@@ -274,7 +310,7 @@ namespace UML_Diagram_Generator
 
             Package root;
 
-            if(singleRoot)
+            if (singleRoot)
             {
                 root = new Package() { Name = hierarchies.First().First() };
             }
@@ -291,10 +327,10 @@ namespace UML_Diagram_Generator
                 {
                     //Either navigate into the underlying package of the package above, or create it as required.
                     Package package = previous.Get(name);
-                    
-                    if(package == null)
+
+                    if (package == null)
                     {
-                        package  = new Package() { Name = name };
+                        package = new Package() { Name = name };
                         previous.Packages.Add(package);
                     }
                     previous = package;
@@ -303,22 +339,25 @@ namespace UML_Diagram_Generator
 
             foreach (Node node in umlEntities)
             {
-                List<string> packages = node.Name.GetNameSpaceHierarchy().TakeWhile(n => n.NoNameSpaces() != node.Name.NoNameSpaces()).ToList();
+                List<string> packages = node.Name.GetNameSpaceHierarchy().TakeWhile(n => n != node.Name).ToList();
                 packages = (!root.IsVirtual) ? packages : packages.Skip(1).ToList(); //Dont try to add root to root.
 
                 Package targetPackage = root;
                 foreach (var p in packages)
                 {
-                    targetPackage = targetPackage.Get(p);
+                    Package newTarget = targetPackage.Get(p);
+                    
+                    if (newTarget == null)
+                        break;
+
+                    targetPackage = newTarget;
                 }
 
                 targetPackage.Nodes.Add(node);
             }
 
-            return (root,umlEntities);
+            return (root, umlEntities);
         }
-
-
 
         /// <summary>
         /// Represents a UML entity that can be represented.
@@ -332,7 +371,7 @@ namespace UML_Diagram_Generator
                 StringBuilder builder = new StringBuilder();
                 OutputSelf(builder);
                 return builder.ToString();
-            }
+            } 
 
             /// <summary>
             /// Output all that is required to render this UML element within some diagram.
@@ -340,7 +379,6 @@ namespace UML_Diagram_Generator
             /// <param name="builder">The stringbuilder to render to</param>
             /// <returns></returns>
             public abstract void OutputSelf(StringBuilder builder);
-
         }
 
 
@@ -629,12 +667,59 @@ namespace UML_Diagram_Generator
 
                 // Setup executable and parameters
                 process.StartInfo.FileName = executable;
-                process.StartInfo.Arguments = string.Format(@"{0} -Tsvg -O", fileName);
+                process.StartInfo.Arguments = $" \"{fileName}\" -Tsvg -O";
 
                 // Go
                 process.Start();
+
+                //Todo: check if below contains an error instead of blindly outputting.
+                Console.WriteLine(process.StandardOutput.ReadToEnd());
+
                 // and wait dot.exe to complete and exit
                 process.WaitForExit();
+            }
+        }
+
+        public static class DoxygenRunner
+        {
+            /// <summary>Runs doxygen on the specified path, thereby updating - among others- the XML of the data inside.</summary>
+
+            public static void Run(string path)
+            {
+
+                try
+                {
+                    string executable = @"doxygen.exe";
+
+                    System.Diagnostics.Process process = new System.Diagnostics.Process();
+
+                    // Stop the process from opening a new window
+                    process.StartInfo.RedirectStandardOutput = true;
+                    process.StartInfo.UseShellExecute = false;
+                    process.StartInfo.CreateNoWindow = true;
+                    process.StartInfo.WorkingDirectory = path;
+
+                    //Get doxyfile location that generates the required XML.
+                    string doxyFile = Path.GetFullPath("./Doxyfile");
+
+                    // Setup executable and parameters
+                    process.StartInfo.FileName = executable;
+                    process.StartInfo.Arguments = string.Format($"\"{doxyFile}\"");
+
+                    // Go
+                    process.Start();
+                    // and wait complete and exit
+
+                    Console.WriteLine(process.StandardOutput.ReadToEnd());
+
+
+                    process.WaitForExit();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($" {ex.GetType().Name} : {ex.Message}..\r\n \tNote: Doxygen must be in windows PATH variable.");
+
+                }
             }
         }
 

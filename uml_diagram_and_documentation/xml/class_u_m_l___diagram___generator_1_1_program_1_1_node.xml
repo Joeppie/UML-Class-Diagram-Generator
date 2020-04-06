@@ -1,0 +1,186 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_u_m_l___diagram___generator_1_1_program_1_1_node" kind="class" language="C#" prot="private">
+    <compoundname>UML_Diagram_Generator::Program::Node</compoundname>
+    <basecompoundref refid="class_u_m_l___diagram___generator_1_1_program_1_1_u_m_l_entity" prot="public" virt="non-virtual">UML_Diagram_Generator.Program.UMLEntity</basecompoundref>
+    <derivedcompoundref refid="class_u_m_l___diagram___generator_1_1_program_1_1_class_node" prot="public" virt="non-virtual">UML_Diagram_Generator.Program.ClassNode</derivedcompoundref>
+    <derivedcompoundref refid="class_u_m_l___diagram___generator_1_1_program_1_1_interface_node" prot="public" virt="non-virtual">UML_Diagram_Generator.Program.InterfaceNode</derivedcompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_u_m_l___diagram___generator_1_1_program_1_1_node_1ab6dabecb273a46b0053c340d869ce90d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_u_m_l___diagram___generator_1_1_program_1_1_package" kindref="compound">Package</ref></type>
+        <definition>Package UML_Diagram_Generator.Program.Node.Package</definition>
+        <argsstring></argsstring>
+        <name>Package</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="UML Diagram Generator/Program.cs" line="490" column="28" bodyfile="UML Diagram Generator/Program.cs" bodystart="490" bodyend="490"/>
+      </memberdef>
+      <memberdef kind="property" id="class_u_m_l___diagram___generator_1_1_program_1_1_node_1a84fd7a0e378b4d064912a3eed436f75d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>List&lt; <ref refid="class_u_m_l___diagram___generator_1_1_program_1_1_usage" kindref="compound">Usage</ref> &gt;</type>
+        <definition>List&lt;Usage&gt; UML_Diagram_Generator.Program.Node.Inherits</definition>
+        <argsstring></argsstring>
+        <name>Inherits</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="UML Diagram Generator/Program.cs" line="491" column="25" bodyfile="UML Diagram Generator/Program.cs" bodystart="491" bodyend="491"/>
+        <referencedby refid="class_u_m_l___diagram___generator_1_1_program_1a0fa6d432a7ad24491e78fcf92cbc2617" compoundref="_program_8cs" startline="151" endline="353">UML_Diagram_Generator.Program.ParseDoxygenStructure</referencedby>
+        <referencedby refid="class_u_m_l___diagram___generator_1_1_program_1_1_node_1a3a71862efec6c130d9c11dd3a34225cc" compoundref="_program_8cs" startline="504" endline="626">UML_Diagram_Generator.Program.Node.OutputRelations</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_u_m_l___diagram___generator_1_1_program_1_1_node_1a6c7ef182803418b5811777d2529ecdc6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>List&lt; <ref refid="class_u_m_l___diagram___generator_1_1_program_1_1_usage" kindref="compound">Usage</ref> &gt;</type>
+        <definition>List&lt;Usage&gt; UML_Diagram_Generator.Program.Node.Uses</definition>
+        <argsstring></argsstring>
+        <name>Uses</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="UML Diagram Generator/Program.cs" line="492" column="25" bodyfile="UML Diagram Generator/Program.cs" bodystart="492" bodyend="492"/>
+        <referencedby refid="class_u_m_l___diagram___generator_1_1_program_1_1_node_1a3a71862efec6c130d9c11dd3a34225cc" compoundref="_program_8cs" startline="504" endline="626">UML_Diagram_Generator.Program.Node.OutputRelations</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_u_m_l___diagram___generator_1_1_program_1_1_node_1a3412a834c2aeddc65ffc70b3b96ae512" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>List&lt; <ref refid="class_u_m_l___diagram___generator_1_1_program_1_1_attribute" kindref="compound">Attribute</ref> &gt;</type>
+        <definition>List&lt;Attribute&gt; UML_Diagram_Generator.Program.Node.Attributes</definition>
+        <argsstring></argsstring>
+        <name>Attributes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="UML Diagram Generator/Program.cs" line="493" column="25" bodyfile="UML Diagram Generator/Program.cs" bodystart="493" bodyend="493"/>
+        <referencedby refid="class_u_m_l___diagram___generator_1_1_program_1_1_node_1a3a71862efec6c130d9c11dd3a34225cc" compoundref="_program_8cs" startline="504" endline="626">UML_Diagram_Generator.Program.Node.OutputRelations</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_u_m_l___diagram___generator_1_1_program_1_1_node_1a3e35ff221c546ba390dd98a17fd32847" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>List&lt; <ref refid="class_u_m_l___diagram___generator_1_1_program_1_1_method" kindref="compound">Method</ref> &gt;</type>
+        <definition>List&lt;Method&gt; UML_Diagram_Generator.Program.Node.Methods</definition>
+        <argsstring></argsstring>
+        <name>Methods</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="UML Diagram Generator/Program.cs" line="494" column="25" bodyfile="UML Diagram Generator/Program.cs" bodystart="494" bodyend="494"/>
+        <referencedby refid="class_u_m_l___diagram___generator_1_1_program_1_1_node_1a3a71862efec6c130d9c11dd3a34225cc" compoundref="_program_8cs" startline="504" endline="626">UML_Diagram_Generator.Program.Node.OutputRelations</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_u_m_l___diagram___generator_1_1_program_1_1_node_1ac87f5448c01d188c36dbb9e9ab88b848" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool UML_Diagram_Generator.Program.Node.IsInterface</definition>
+        <argsstring></argsstring>
+        <name>IsInterface</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="UML Diagram Generator/Program.cs" line="497" column="25" bodyfile="UML Diagram Generator/Program.cs" bodystart="497" bodyend="497"/>
+        <referencedby refid="class_u_m_l___diagram___generator_1_1_program_1_1_class_node_1adabaf4fc50a8e31e8433b2d4a7d713cd" compoundref="_program_8cs" startline="631" endline="634">UML_Diagram_Generator.Program.ClassNode.ClassNode</referencedby>
+        <referencedby refid="class_u_m_l___diagram___generator_1_1_program_1_1_interface_node_1a305625efb854357dbcaf4f21d17bb0b1" compoundref="_program_8cs" startline="639" endline="642">UML_Diagram_Generator.Program.InterfaceNode.InterfaceNode</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_u_m_l___diagram___generator_1_1_program_1_1_node_1a3a71862efec6c130d9c11dd3a34225cc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>StringBuilder</type>
+        <definition>StringBuilder UML_Diagram_Generator.Program.Node.OutputRelations</definition>
+        <argsstring>(StringBuilder builder)</argsstring>
+        <name>OutputRelations</name>
+        <param>
+          <type>StringBuilder</type>
+          <declname>builder</declname>
+        </param>
+        <briefdescription>
+<para>Outputs a list of the relations that this class has toward other classes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>builder</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the stringbuilder to render to</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="UML Diagram Generator/Program.cs" line="504" column="34" bodyfile="UML Diagram Generator/Program.cs" bodystart="504" bodyend="626"/>
+        <references refid="class_u_m_l___diagram___generator_1_1_program_1_1_node_1a3412a834c2aeddc65ffc70b3b96ae512" compoundref="_program_8cs" startline="493" endline="493">UML_Diagram_Generator.Program.Node.Attributes</references>
+        <references refid="class_u_m_l___diagram___generator_1_1_program_1_1_node_1a84fd7a0e378b4d064912a3eed436f75d" compoundref="_program_8cs" startline="491" endline="491">UML_Diagram_Generator.Program.Node.Inherits</references>
+        <references refid="class_u_m_l___diagram___generator_1_1_program_1_1_node_1a3e35ff221c546ba390dd98a17fd32847" compoundref="_program_8cs" startline="494" endline="494">UML_Diagram_Generator.Program.Node.Methods</references>
+        <references refid="class_u_m_l___diagram___generator_1_1_program_1_1_u_m_l_entity_1a61b48536fb68af180729e68847b92815" compoundref="_program_8cs" startline="360" endline="360">UML_Diagram_Generator.Program.UMLEntity.Name</references>
+        <references refid="class_u_m_l___diagram___generator_1_1_program_1_1_node_1a6c7ef182803418b5811777d2529ecdc6" compoundref="_program_8cs" startline="492" endline="492">UML_Diagram_Generator.Program.Node.Uses</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>UMLEntity</label>
+        <link refid="class_u_m_l___diagram___generator_1_1_program_1_1_u_m_l_entity"/>
+      </node>
+      <node id="1">
+        <label>UML_Diagram_Generator.Program.Node</label>
+        <link refid="class_u_m_l___diagram___generator_1_1_program_1_1_node"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>UML_Diagram_Generator.Program.ClassNode</label>
+        <link refid="class_u_m_l___diagram___generator_1_1_program_1_1_class_node"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>UML_Diagram_Generator.Program.InterfaceNode</label>
+        <link refid="class_u_m_l___diagram___generator_1_1_program_1_1_interface_node"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>UMLEntity</label>
+        <link refid="class_u_m_l___diagram___generator_1_1_program_1_1_u_m_l_entity"/>
+      </node>
+      <node id="1">
+        <label>UML_Diagram_Generator.Program.Node</label>
+        <link refid="class_u_m_l___diagram___generator_1_1_program_1_1_node"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="UML Diagram Generator/Program.cs" line="489" column="1" bodyfile="UML Diagram Generator/Program.cs" bodystart="488" bodyend="627"/>
+    <listofallmembers>
+      <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_node_1a3412a834c2aeddc65ffc70b3b96ae512" prot="public" virt="non-virtual"><scope>UML_Diagram_Generator::Program::Node</scope><name>Attributes</name></member>
+      <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_node_1a84fd7a0e378b4d064912a3eed436f75d" prot="public" virt="non-virtual"><scope>UML_Diagram_Generator::Program::Node</scope><name>Inherits</name></member>
+      <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_node_1ac87f5448c01d188c36dbb9e9ab88b848" prot="public" virt="non-virtual"><scope>UML_Diagram_Generator::Program::Node</scope><name>IsInterface</name></member>
+      <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_node_1a3e35ff221c546ba390dd98a17fd32847" prot="public" virt="non-virtual"><scope>UML_Diagram_Generator::Program::Node</scope><name>Methods</name></member>
+      <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_u_m_l_entity_1a61b48536fb68af180729e68847b92815" prot="public" virt="non-virtual"><scope>UML_Diagram_Generator::Program::Node</scope><name>Name</name></member>
+      <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_node_1a3a71862efec6c130d9c11dd3a34225cc" prot="public" virt="non-virtual"><scope>UML_Diagram_Generator::Program::Node</scope><name>OutputRelations</name></member>
+      <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_u_m_l_entity_1a7b2f23d2e85919fe75262c8f1eba0ccc" prot="public" virt="pure-virtual"><scope>UML_Diagram_Generator::Program::Node</scope><name>OutputSelf</name></member>
+      <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_node_1ab6dabecb273a46b0053c340d869ce90d" prot="public" virt="non-virtual"><scope>UML_Diagram_Generator::Program::Node</scope><name>Package</name></member>
+      <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_u_m_l_entity_1a896991e18b4136d9577445d81f67ef53" prot="public" virt="non-virtual"><scope>UML_Diagram_Generator::Program::Node</scope><name>ToString</name></member>
+      <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_node_1a6c7ef182803418b5811777d2529ecdc6" prot="public" virt="non-virtual"><scope>UML_Diagram_Generator::Program::Node</scope><name>Uses</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

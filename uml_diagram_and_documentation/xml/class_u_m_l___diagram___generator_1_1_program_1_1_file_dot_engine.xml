@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_u_m_l___diagram___generator_1_1_program_1_1_file_dot_engine" kind="class" language="C#" prot="public">
+    <compoundname>UML_Diagram_Generator::Program::FileDotEngine</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_u_m_l___diagram___generator_1_1_program_1_1_file_dot_engine_1a1e902957cfab73bb1a89f6c5262d7e3f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void UML_Diagram_Generator.Program.FileDotEngine.Run</definition>
+        <argsstring>(string dot, string fileName)</argsstring>
+        <name>Run</name>
+        <param>
+          <type>string</type>
+          <declname>dot</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>fileName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="UML Diagram Generator/Program.cs" line="649" column="32" bodyfile="UML Diagram Generator/Program.cs" bodystart="649" bodyend="669"/>
+        <referencedby refid="class_u_m_l___diagram___generator_1_1_program_1a5f2dfed1b8b900b321af1eaca03af23f" compoundref="_program_8cs" startline="56" endline="147">UML_Diagram_Generator.Program.Main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>UML_Diagram_Generator.Program.FileDotEngine</label>
+        <link refid="class_u_m_l___diagram___generator_1_1_program_1_1_file_dot_engine"/>
+      </node>
+    </collaborationgraph>
+    <location file="UML Diagram Generator/Program.cs" line="648" column="1" bodyfile="UML Diagram Generator/Program.cs" bodystart="647" bodyend="670"/>
+    <listofallmembers>
+      <member refid="class_u_m_l___diagram___generator_1_1_program_1_1_file_dot_engine_1a1e902957cfab73bb1a89f6c5262d7e3f" prot="public" virt="non-virtual"><scope>UML_Diagram_Generator::Program::FileDotEngine</scope><name>Run</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

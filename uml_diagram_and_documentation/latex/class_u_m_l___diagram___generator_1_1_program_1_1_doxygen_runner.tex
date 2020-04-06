@@ -1,0 +1,94 @@
+\hypertarget{class_u_m_l___diagram___generator_1_1_program_1_1_doxygen_runner}{}\doxysection{U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Program.\+Doxygen\+Runner Class Reference}
+\label{class_u_m_l___diagram___generator_1_1_program_1_1_doxygen_runner}\index{UML\_Diagram\_Generator.Program.DoxygenRunner@{UML\_Diagram\_Generator.Program.DoxygenRunner}}
+
+
+Collaboration diagram for U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Program.\+Doxygen\+Runner\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{class_u_m_l___diagram___generator_1_1_program_1_1_doxygen_runner__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_doxygen_runner_ab25111d71a8ee8c800ca245a35484c2f}{Run}} (string path)
+\begin{DoxyCompactList}\small\item\em Runs doxygen on the specified path, thereby updating -\/ among others-\/ the X\+ML of the data inside. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 672 of file Program.\+cs.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_m_l___diagram___generator_1_1_program_1_1_doxygen_runner_ab25111d71a8ee8c800ca245a35484c2f}\label{class_u_m_l___diagram___generator_1_1_program_1_1_doxygen_runner_ab25111d71a8ee8c800ca245a35484c2f}} 
+\index{UML\_Diagram\_Generator.Program.DoxygenRunner@{UML\_Diagram\_Generator.Program.DoxygenRunner}!Run@{Run}}
+\index{Run@{Run}!UML\_Diagram\_Generator.Program.DoxygenRunner@{UML\_Diagram\_Generator.Program.DoxygenRunner}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily static void U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Program.\+Doxygen\+Runner.\+Run (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Runs doxygen on the specified path, thereby updating -\/ among others-\/ the X\+ML of the data inside. 
+
+
+
+Definition at line 676 of file Program.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{677             \{}
+\DoxyCodeLine{678 }
+\DoxyCodeLine{679                 \textcolor{keywordflow}{try}}
+\DoxyCodeLine{680                 \{}
+\DoxyCodeLine{681                     \textcolor{keywordtype}{string} executable = \textcolor{stringliteral}{@"doxygen.exe"};}
+\DoxyCodeLine{682 }
+\DoxyCodeLine{683                     System.Diagnostics.Process process = \textcolor{keyword}{new} System.Diagnostics.Process();}
+\DoxyCodeLine{684 }
+\DoxyCodeLine{685                     \textcolor{comment}{// Stop the process from opening a new window}}
+\DoxyCodeLine{686                     process.StartInfo.RedirectStandardOutput = \textcolor{keyword}{true};}
+\DoxyCodeLine{687                     process.StartInfo.UseShellExecute = \textcolor{keyword}{false};}
+\DoxyCodeLine{688                     process.StartInfo.CreateNoWindow = \textcolor{keyword}{true};}
+\DoxyCodeLine{689                     process.StartInfo.WorkingDirectory = path;}
+\DoxyCodeLine{690 }
+\DoxyCodeLine{691                     \textcolor{comment}{//Get doxyfile location that generates the required XML.}}
+\DoxyCodeLine{692                     \textcolor{keywordtype}{string} doxyFile = Path.GetFullPath(\textcolor{stringliteral}{"./Doxyfile"});}
+\DoxyCodeLine{693 }
+\DoxyCodeLine{694                     \textcolor{comment}{// Setup executable and parameters}}
+\DoxyCodeLine{695                     process.StartInfo.FileName = executable;}
+\DoxyCodeLine{696                     process.StartInfo.Arguments = \textcolor{keywordtype}{string}.Format(\$\textcolor{stringliteral}{"\(\backslash\)"\{doxyFile\}\(\backslash\)""});}
+\DoxyCodeLine{697 }
+\DoxyCodeLine{698                     \textcolor{comment}{// Go}}
+\DoxyCodeLine{699                     process.Start();}
+\DoxyCodeLine{700                     \textcolor{comment}{// and wait complete and exit}}
+\DoxyCodeLine{701 }
+\DoxyCodeLine{702                     Console.WriteLine(process.StandardOutput.ReadToEnd());}
+\DoxyCodeLine{703 }
+\DoxyCodeLine{704 }
+\DoxyCodeLine{705                     process.WaitForExit();}
+\DoxyCodeLine{706                 \}}
+\DoxyCodeLine{707                 \textcolor{keywordflow}{catch} (Exception ex)}
+\DoxyCodeLine{708                 \{}
+\DoxyCodeLine{709                     Console.WriteLine(\$\textcolor{stringliteral}{" \{ex.GetType().Name\} : \{ex.Message\}..\(\backslash\)r\(\backslash\)n \(\backslash\)tNote: Doxygen must be in windows PATH variable."});}
+\DoxyCodeLine{710 }
+\DoxyCodeLine{711                 \}}
+\DoxyCodeLine{712             \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_m_l___diagram___generator_1_1_program_1_1_doxygen_runner_ab25111d71a8ee8c800ca245a35484c2f_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+U\+M\+L Diagram Generator/\mbox{\hyperlink{_program_8cs}{Program.\+cs}}\end{DoxyCompactItemize}

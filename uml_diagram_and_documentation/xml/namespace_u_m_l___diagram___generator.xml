@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="namespace_u_m_l___diagram___generator" kind="namespace" language="C#">
+    <compoundname>UML_Diagram_Generator</compoundname>
+    <innerclass refid="class_u_m_l___diagram___generator_1_1_extensions" prot="public">UML_Diagram_Generator::Extensions</innerclass>
+    <innerclass refid="class_u_m_l___diagram___generator_1_1_program" prot="public">UML_Diagram_Generator::Program</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="UML Diagram Generator/Program.cs" line="13" column="1"/>
+  </compounddef>
+</doxygen>

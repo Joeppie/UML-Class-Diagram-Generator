@@ -1,0 +1,56 @@
+  digraph ClassDiagram {
+              fontname = "Consolas"
+              fontsize = 8
+
+              node [
+                      fontname = "Consolas"
+                      fontsize = 8
+                      shape = "record"
+              ]
+
+              edge [
+                      fontname = "Consolas"
+                      fontsize = 8
+              ]
+              subgraph UML_Diagram_Generator {
+label = "UML_Diagram_Generator"subgraph UML_Diagram_Generator {
+label = "UML_Diagram_Generator"subgraph Program {
+label = "Program""Attribute" [ label="{Attribute|- Type : string\l- Public : bool\l-  : UMLEntity\l|+ OutputSelf() : override void\l}" ] "ClassNode" [ label="{ClassNode|-  : Node\l|+ ClassNode() : \l}" ] "ClassUsage" [ label="{ClassUsage||}" ] "DoxygenRunner" [ label="{DoxygenRunner||+ Run() : void\l}" ] "FileDotEngine" [ label="{FileDotEngine||+ Run() : void\l}" ] "InterfaceNode" [ label="{InterfaceNode|-  : Node\l|+ InterfaceNode() : \l}" ] "InterfaceUsage" [ label="{InterfaceUsage||}" ] "Method" [ label="{Method|- Public : bool\l- Type : string\l-  : UMLEntity\l|+ OutputSelf() : override void\l}" ] "Node" [ label="{Node|- Package : Package\l- Inherits : Usage\l- Uses : Usage\l- Attributes : Attribute\l- Methods : Method\l- IsInterface : bool\l-  : UMLEntity\l|+ OutputRelations() : StringBuilder\l}" ] "Package" [ label="{Package|- Nodes : Node\l- Packages : Package\l- IsVirtual : bool\l|+ Package() : \l+ Contains() : bool\l+ Get() : Package\l+ OutputSelf() : override void\l}" ] "UMLEntity" [ label="{UMLEntity|- Name : string\l|+ ToString() : override string\l+ OutputSelf() : abstract void\l}" ] "Usage" [ label="{Usage|- Compound : bool\l- node : T\l- Relevant : bool\l- Public : bool\l- DeclaredName : string\l- TypeName : string?\l- Resolved : bool\l- _typeName : string\l|}" ] 
+}
+"Extensions" [ label="{Extensions||+ Escape() : string\l+ Safe() : string\l+ NoNameSpaces() : string\l+ GetNameSpaceHierarchy() : List&lt; string &gt;\l+ WithoutGuid() : string\l}" ] "Program" [ label="{Program|- Package : static\l-  : DoxygenRunner\l-  : FileDotEngine\l-  : Package\l-  : Node\l-  : UMLEntity\l|- Main() : void\l- ParseDoxygenStructure() : List&lt; UMLEntity &gt;\l}" ] 
+}
+
+}
+ edge [arrowtail = "empty" ]
+"UMLEntity"->"Attribute" [style=solid   dir=back ]
+
+ edge [arrowtail = "empty" ]
+"Node"->"ClassNode" [style=solid   dir=back ]
+
+ edge [arrowtail = "empty" ]
+"Usage&lt; ClassNode &gt;"->"ClassUsage" [style=solid   dir=back ]
+
+
+
+
+ edge [arrowtail = "empty" ]
+"Node"->"InterfaceNode" [style=solid   dir=back ]
+
+ edge [arrowtail = "empty" ]
+"Usage&lt; InterfaceNode &gt;"->"InterfaceUsage" [style=solid   dir=back ]
+
+ edge [arrowtail = "empty" ]
+"UMLEntity"->"Method" [style=solid   dir=back ]
+
+ edge [arrowtail = "empty" ]
+"UMLEntity"->"Node" [style=solid   dir=back ]
+
+ edge [arrowtail = "empty" ]
+"UMLEntity"->"Package" [style=solid   dir=back ]
+
+
+
+
+
+  }
+  

@@ -1,0 +1,298 @@
+\hypertarget{class_u_m_l___diagram___generator_1_1_program_1_1_node}{}\doxysection{U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Program.\+Node Class Reference}
+\label{class_u_m_l___diagram___generator_1_1_program_1_1_node}\index{UML\_Diagram\_Generator.Program.Node@{UML\_Diagram\_Generator.Program.Node}}
+
+
+Inheritance diagram for U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Program.\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_m_l___diagram___generator_1_1_program_1_1_node__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Program.\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=271pt]{class_u_m_l___diagram___generator_1_1_program_1_1_node__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+String\+Builder \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_node_a3a71862efec6c130d9c11dd3a34225cc}{Output\+Relations}} (String\+Builder builder)
+\begin{DoxyCompactList}\small\item\em Outputs a list of the relations that this class has toward other classes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_package}{Package}} \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_node_ab6dabecb273a46b0053c340d869ce90d}{Package}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+List$<$ \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_usage}{Usage}} $>$ \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_node_a84fd7a0e378b4d064912a3eed436f75d}{Inherits}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+List$<$ \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_usage}{Usage}} $>$ \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_node_a6c7ef182803418b5811777d2529ecdc6}{Uses}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+List$<$ \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_attribute}{Attribute}} $>$ \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_node_a3412a834c2aeddc65ffc70b3b96ae512}{Attributes}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+List$<$ \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_method}{Method}} $>$ \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_node_a3e35ff221c546ba390dd98a17fd32847}{Methods}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_node_ac87f5448c01d188c36dbb9e9ab88b848}{Is\+Interface}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 488 of file Program.\+cs.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_m_l___diagram___generator_1_1_program_1_1_node_a3a71862efec6c130d9c11dd3a34225cc}\label{class_u_m_l___diagram___generator_1_1_program_1_1_node_a3a71862efec6c130d9c11dd3a34225cc}} 
+\index{UML\_Diagram\_Generator.Program.Node@{UML\_Diagram\_Generator.Program.Node}!OutputRelations@{OutputRelations}}
+\index{OutputRelations@{OutputRelations}!UML\_Diagram\_Generator.Program.Node@{UML\_Diagram\_Generator.Program.Node}}
+\doxysubsubsection{\texorpdfstring{OutputRelations()}{OutputRelations()}}
+{\footnotesize\ttfamily String\+Builder U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Program.\+Node.\+Output\+Relations (\begin{DoxyParamCaption}\item[{String\+Builder}]{builder }\end{DoxyParamCaption})}
+
+
+
+Outputs a list of the relations that this class has toward other classes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em builder} & the stringbuilder to render to\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 504 of file Program.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{505             \{}
+\DoxyCodeLine{506 }
+\DoxyCodeLine{507                 \textcolor{keywordflow}{foreach} (var use \textcolor{keywordflow}{in} \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_node_a6c7ef182803418b5811777d2529ecdc6}{Uses}}.Where(u => u.Relevant))}
+\DoxyCodeLine{508                 \{}
+\DoxyCodeLine{509 }
+\DoxyCodeLine{510                     \textcolor{comment}{//Do not pretend to be 'using' a type that is equal to the inheriting types.}}
+\DoxyCodeLine{511                     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_node_a84fd7a0e378b4d064912a3eed436f75d}{Inherits}}.Any(i => i.TypeName == use.TypeName))}
+\DoxyCodeLine{512                     \{}
+\DoxyCodeLine{513                         \textcolor{keywordflow}{continue}; \textcolor{comment}{//don't output if using superclass, this is not a useful notation.}}
+\DoxyCodeLine{514                     \}}
+\DoxyCodeLine{515 }
+\DoxyCodeLine{516 }
+\DoxyCodeLine{517                     \textcolor{comment}{//Todo: any reference to a complex type (i.e. class) tends to get displayed as a compound reference when it is a member in\(\backslash\)}}
+\DoxyCodeLine{518 \textcolor{comment}{                    //the class; this is not a correct logic; needs to be expanded for example by checking the contents of the 'refid' in question (if it is nested, it}}
+\DoxyCodeLine{519                     \textcolor{comment}{//could probably be assumed to be a more than one relationship; i.e. composition)}}
+\DoxyCodeLine{520                     use.Compound = \textcolor{keyword}{false};}
+\DoxyCodeLine{521 }
+\DoxyCodeLine{522                     \textcolor{keywordtype}{string} arrowhead;}
+\DoxyCodeLine{523                     \textcolor{keywordflow}{if} (use.Compound)}
+\DoxyCodeLine{524                     \{}
+\DoxyCodeLine{525                         arrowhead = \textcolor{stringliteral}{"arrowhead=odiamond"};}
+\DoxyCodeLine{526                         builder.AppendLine(\$\textcolor{stringliteral}{@"""\{ use.TypeName.NoNameSpaces()\}""-\/>""\{Name.NoNameSpaces()\}"" [\{arrowhead\}  \{(use.node is InterfaceNode ? "}style =dashed\textcolor{stringliteral}{" : "}\textcolor{stringliteral}{")\}  label="}\textcolor{stringliteral}{"\{use.DeclaredName.NoNameSpaces()\}"}\textcolor{stringliteral}{" ]"});}
+\DoxyCodeLine{527 }
+\DoxyCodeLine{528                     \}}
+\DoxyCodeLine{529                     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{530                     \{}
+\DoxyCodeLine{531                         arrowhead = \textcolor{stringliteral}{"arrowhead = normal"};}
+\DoxyCodeLine{532                         builder.AppendLine(\$\textcolor{stringliteral}{@"""\{ Name.NoNameSpaces()\}""-\/>""\{use.TypeName.NoNameSpaces()\}"" [\{arrowhead\}  \{(use.node is InterfaceNode ? "}style =dashed\textcolor{stringliteral}{" : "}\textcolor{stringliteral}{")\}  label="}\textcolor{stringliteral}{"\{use.DeclaredName.NoNameSpaces()\}"}\textcolor{stringliteral}{" ]"});}
+\DoxyCodeLine{533 }
+\DoxyCodeLine{534                     \}}
+\DoxyCodeLine{535 }
+\DoxyCodeLine{536                     \textcolor{comment}{//Create the actual arrow from this node to the used one, if the used node is an interface, make the line dashed to indicate dependency}}
+\DoxyCodeLine{537                 \}}
+\DoxyCodeLine{538 }
+\DoxyCodeLine{539 }
+\DoxyCodeLine{540                 \textcolor{keywordflow}{foreach} (var inheritee \textcolor{keywordflow}{in} \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_node_a84fd7a0e378b4d064912a3eed436f75d}{Inherits}})}
+\DoxyCodeLine{541                 \{}
+\DoxyCodeLine{542                     builder.AppendLine(\textcolor{stringliteral}{@" edge [arrowtail = ""empty"" ]"});}
+\DoxyCodeLine{543                     builder.AppendLine(\$\textcolor{stringliteral}{"\(\backslash\)"\{inheritee.TypeName.NoNameSpaces()\}\(\backslash\)"-\/>\(\backslash\)"\{Name.NoNameSpaces()\}\(\backslash\)" [\{ (inheritee.node is InterfaceNode ? "}style=dashed\textcolor{stringliteral}{" : "}style=solid\textcolor{stringliteral}{")\} \{ (inheritee == null ? "}, label=\(\backslash\)\textcolor{stringliteral}{"??\(\backslash\)""} : \textcolor{stringliteral}{" "}) \} dir=back ]\textcolor{stringliteral}{");}}
+\DoxyCodeLine{544 \textcolor{stringliteral}{                \}}}
+\DoxyCodeLine{545 \textcolor{stringliteral}{}}
+\DoxyCodeLine{546 \textcolor{stringliteral}{                return builder;}}
+\DoxyCodeLine{547 \textcolor{stringliteral}{            \}}}
+\DoxyCodeLine{548 \textcolor{stringliteral}{}}
+\DoxyCodeLine{549 \textcolor{stringliteral}{}}
+\DoxyCodeLine{550 \textcolor{stringliteral}{            public Node()}}
+\DoxyCodeLine{551 \textcolor{stringliteral}{            \{}}
+\DoxyCodeLine{552 \textcolor{stringliteral}{                Inherits = new List<Usage>();}}
+\DoxyCodeLine{553 \textcolor{stringliteral}{                Uses = new List<Usage>();}}
+\DoxyCodeLine{554 \textcolor{stringliteral}{                Attributes = new List<Attribute>();}}
+\DoxyCodeLine{555 \textcolor{stringliteral}{                Methods = new List<Method>();}}
+\DoxyCodeLine{556 \textcolor{stringliteral}{            \}}}
+\DoxyCodeLine{557 \textcolor{stringliteral}{}}
+\DoxyCodeLine{558 \textcolor{stringliteral}{            public void ResolveUses(Dictionary<string, Node> lookup)}}
+\DoxyCodeLine{559 \textcolor{stringliteral}{            \{}}
+\DoxyCodeLine{560 \textcolor{stringliteral}{                foreach (var use in Uses)}}
+\DoxyCodeLine{561 \textcolor{stringliteral}{                \{}}
+\DoxyCodeLine{562 \textcolor{stringliteral}{                    if (!use.Resolved)}}
+\DoxyCodeLine{563 \textcolor{stringliteral}{                    \{}}
+\DoxyCodeLine{564 \textcolor{stringliteral}{                        if (lookup.ContainsKey(use.TypeName))}}
+\DoxyCodeLine{565 \textcolor{stringliteral}{                        \{}}
+\DoxyCodeLine{566 \textcolor{stringliteral}{                            use.Relevant = true;}}
+\DoxyCodeLine{567 \textcolor{stringliteral}{                            use.node = lookup[use.TypeName];}}
+\DoxyCodeLine{568 \textcolor{stringliteral}{                        \}}}
+\DoxyCodeLine{569 \textcolor{stringliteral}{                        else //Not part of UML diagram itself, mark it as an attribute.}}
+\DoxyCodeLine{570 \textcolor{stringliteral}{                        \{}}
+\DoxyCodeLine{571 \textcolor{stringliteral}{                            use.Relevant = false;}}
+\DoxyCodeLine{572 \textcolor{stringliteral}{                            Attributes.Add(new Attribute}}
+\DoxyCodeLine{573 \textcolor{stringliteral}{                            \{}}
+\DoxyCodeLine{574 \textcolor{stringliteral}{                                Name = use.DeclaredName,}}
+\DoxyCodeLine{575 \textcolor{stringliteral}{                                Public = use.Public,}}
+\DoxyCodeLine{576 \textcolor{stringliteral}{                                Type = use.TypeName}}
+\DoxyCodeLine{577 \textcolor{stringliteral}{                            \});}}
+\DoxyCodeLine{578 \textcolor{stringliteral}{                        \}}}
+\DoxyCodeLine{579 \textcolor{stringliteral}{                    \}}}
+\DoxyCodeLine{580 \textcolor{stringliteral}{                \}}}
+\DoxyCodeLine{581 \textcolor{stringliteral}{}}
+\DoxyCodeLine{582 \textcolor{stringliteral}{                foreach (var inheritee in Inherits)}}
+\DoxyCodeLine{583 \textcolor{stringliteral}{                \{}}
+\DoxyCodeLine{584 \textcolor{stringliteral}{                    if (!inheritee.Resolved)}}
+\DoxyCodeLine{585 \textcolor{stringliteral}{                    \{}}
+\DoxyCodeLine{586 \textcolor{stringliteral}{                        if (lookup.ContainsKey(inheritee.TypeName))}}
+\DoxyCodeLine{587 \textcolor{stringliteral}{                        \{}}
+\DoxyCodeLine{588 \textcolor{stringliteral}{                            inheritee.Relevant = true;}}
+\DoxyCodeLine{589 \textcolor{stringliteral}{                            inheritee.node = lookup[inheritee.TypeName];}}
+\DoxyCodeLine{590 \textcolor{stringliteral}{                        \}}}
+\DoxyCodeLine{591 \textcolor{stringliteral}{                        else //Not part of UML diagram itself, mark it as an attribute.}}
+\DoxyCodeLine{592 \textcolor{stringliteral}{                        \{}}
+\DoxyCodeLine{593 \textcolor{stringliteral}{                            //Not sure what to make of it, it's not in the diagram.}}
+\DoxyCodeLine{594 \textcolor{stringliteral}{                        \}}}
+\DoxyCodeLine{595 \textcolor{stringliteral}{                    \}}}
+\DoxyCodeLine{596 \textcolor{stringliteral}{                \}}}
+\DoxyCodeLine{597 \textcolor{stringliteral}{            \}}}
+\DoxyCodeLine{598 \textcolor{stringliteral}{}}
+\DoxyCodeLine{599 \textcolor{stringliteral}{            public override void OutputSelf(StringBuilder builder)}}
+\DoxyCodeLine{600 \textcolor{stringliteral}{            \{}}
+\DoxyCodeLine{601 \textcolor{stringliteral}{}}
+\DoxyCodeLine{602 \textcolor{stringliteral}{                //Todo: markering toevoegen <<interface>> boven de naam van de klasse zelf.}}
+\DoxyCodeLine{603 \textcolor{stringliteral}{                builder.Append("}\(\backslash\)\textcolor{stringliteral}{""});}
+\DoxyCodeLine{604                 builder.Append(\mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_u_m_l_entity_a61b48536fb68af180729e68847b92815}{Name}}.NoNameSpaces());}
+\DoxyCodeLine{605                 builder.Append(\textcolor{stringliteral}{"\(\backslash\)""});}
+\DoxyCodeLine{606                 builder.Append(\textcolor{stringliteral}{" [ label=\(\backslash\)"\{"});}
+\DoxyCodeLine{607                 \textcolor{keywordflow}{if} (\textcolor{keyword}{this} is InterfaceNode)}
+\DoxyCodeLine{608                 \{}
+\DoxyCodeLine{609                     builder.Append(\textcolor{stringliteral}{"\&lt;\&lt;interface\&gt;\&gt;\(\backslash\)\(\backslash\)n"});}
+\DoxyCodeLine{610                 \}}
+\DoxyCodeLine{611                 builder.Append(\mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_u_m_l_entity_a61b48536fb68af180729e68847b92815}{Name}}.NoNameSpaces());}
+\DoxyCodeLine{612 }
+\DoxyCodeLine{613                 builder.Append(\textcolor{stringliteral}{"|"});}
+\DoxyCodeLine{614                 \textcolor{keywordflow}{foreach} (var attribute \textcolor{keywordflow}{in} \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_node_a3412a834c2aeddc65ffc70b3b96ae512}{Attributes}})}
+\DoxyCodeLine{615                 \{}
+\DoxyCodeLine{616                     attribute.OutputSelf(builder);}
+\DoxyCodeLine{617                 \}}
+\DoxyCodeLine{618                 builder.Append(\textcolor{stringliteral}{"|"});}
+\DoxyCodeLine{619                 \textcolor{keywordflow}{foreach} (var method \textcolor{keywordflow}{in} \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_node_a3e35ff221c546ba390dd98a17fd32847}{Methods}})}
+\DoxyCodeLine{620                 \{}
+\DoxyCodeLine{621                     method.OutputSelf(builder);}
+\DoxyCodeLine{622                 \}}
+\DoxyCodeLine{623                 builder.Append(\textcolor{stringliteral}{"\}\(\backslash\)""});}
+\DoxyCodeLine{624 }
+\DoxyCodeLine{625                 builder.Append(\textcolor{stringliteral}{" ] "});}
+\DoxyCodeLine{626             \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_u_m_l___diagram___generator_1_1_program_1_1_node_a3412a834c2aeddc65ffc70b3b96ae512}\label{class_u_m_l___diagram___generator_1_1_program_1_1_node_a3412a834c2aeddc65ffc70b3b96ae512}} 
+\index{UML\_Diagram\_Generator.Program.Node@{UML\_Diagram\_Generator.Program.Node}!Attributes@{Attributes}}
+\index{Attributes@{Attributes}!UML\_Diagram\_Generator.Program.Node@{UML\_Diagram\_Generator.Program.Node}}
+\doxysubsubsection{\texorpdfstring{Attributes}{Attributes}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_attribute}{Attribute}}$>$ U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Program.\+Node.\+Attributes\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line 493 of file Program.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{493 \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_u_m_l___diagram___generator_1_1_program_1_1_node_a84fd7a0e378b4d064912a3eed436f75d}\label{class_u_m_l___diagram___generator_1_1_program_1_1_node_a84fd7a0e378b4d064912a3eed436f75d}} 
+\index{UML\_Diagram\_Generator.Program.Node@{UML\_Diagram\_Generator.Program.Node}!Inherits@{Inherits}}
+\index{Inherits@{Inherits}!UML\_Diagram\_Generator.Program.Node@{UML\_Diagram\_Generator.Program.Node}}
+\doxysubsubsection{\texorpdfstring{Inherits}{Inherits}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_usage}{Usage}}$>$ U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Program.\+Node.\+Inherits\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line 491 of file Program.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{491 \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_u_m_l___diagram___generator_1_1_program_1_1_node_ac87f5448c01d188c36dbb9e9ab88b848}\label{class_u_m_l___diagram___generator_1_1_program_1_1_node_ac87f5448c01d188c36dbb9e9ab88b848}} 
+\index{UML\_Diagram\_Generator.Program.Node@{UML\_Diagram\_Generator.Program.Node}!IsInterface@{IsInterface}}
+\index{IsInterface@{IsInterface}!UML\_Diagram\_Generator.Program.Node@{UML\_Diagram\_Generator.Program.Node}}
+\doxysubsubsection{\texorpdfstring{IsInterface}{IsInterface}}
+{\footnotesize\ttfamily bool U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Program.\+Node.\+Is\+Interface\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line 497 of file Program.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{497 \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_u_m_l___diagram___generator_1_1_program_1_1_node_a3e35ff221c546ba390dd98a17fd32847}\label{class_u_m_l___diagram___generator_1_1_program_1_1_node_a3e35ff221c546ba390dd98a17fd32847}} 
+\index{UML\_Diagram\_Generator.Program.Node@{UML\_Diagram\_Generator.Program.Node}!Methods@{Methods}}
+\index{Methods@{Methods}!UML\_Diagram\_Generator.Program.Node@{UML\_Diagram\_Generator.Program.Node}}
+\doxysubsubsection{\texorpdfstring{Methods}{Methods}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_method}{Method}}$>$ U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Program.\+Node.\+Methods\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line 494 of file Program.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{494 \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_u_m_l___diagram___generator_1_1_program_1_1_node_ab6dabecb273a46b0053c340d869ce90d}\label{class_u_m_l___diagram___generator_1_1_program_1_1_node_ab6dabecb273a46b0053c340d869ce90d}} 
+\index{UML\_Diagram\_Generator.Program.Node@{UML\_Diagram\_Generator.Program.Node}!Package@{Package}}
+\index{Package@{Package}!UML\_Diagram\_Generator.Program.Node@{UML\_Diagram\_Generator.Program.Node}}
+\doxysubsubsection{\texorpdfstring{Package}{Package}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_package}{Package}} U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Program.\+Node.\+Package\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line 490 of file Program.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{490 \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_u_m_l___diagram___generator_1_1_program_1_1_node_a6c7ef182803418b5811777d2529ecdc6}\label{class_u_m_l___diagram___generator_1_1_program_1_1_node_a6c7ef182803418b5811777d2529ecdc6}} 
+\index{UML\_Diagram\_Generator.Program.Node@{UML\_Diagram\_Generator.Program.Node}!Uses@{Uses}}
+\index{Uses@{Uses}!UML\_Diagram\_Generator.Program.Node@{UML\_Diagram\_Generator.Program.Node}}
+\doxysubsubsection{\texorpdfstring{Uses}{Uses}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_u_m_l___diagram___generator_1_1_program_1_1_usage}{Usage}}$>$ U\+M\+L\+\_\+\+Diagram\+\_\+\+Generator.\+Program.\+Node.\+Uses\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line 492 of file Program.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{492 \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+U\+M\+L Diagram Generator/\mbox{\hyperlink{_program_8cs}{Program.\+cs}}\end{DoxyCompactItemize}
